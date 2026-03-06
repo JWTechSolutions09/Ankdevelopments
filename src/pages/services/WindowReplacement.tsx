@@ -72,15 +72,25 @@ const WindowReplacement = () => {
                 ))}
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-[#0a1628]">
               <video
                 src="/images/Window Replacement.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="w-full h-full object-cover"
-              />
+                style={{ 
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+              >
+                <source src="/images/Window Replacement.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

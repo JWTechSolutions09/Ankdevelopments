@@ -69,7 +69,7 @@ const Index = () => {
       title: "Painting Services",
       description: "Professional interior and exterior painting to refresh and protect your home.",
       icon: <Paintbrush className="h-8 w-8" />,
-      image: "/images/Living Room.jpeg",
+      image: "/images/Kitchen Work 2.jpeg",
       link: "/servicios/painting-services",
     },
     {
