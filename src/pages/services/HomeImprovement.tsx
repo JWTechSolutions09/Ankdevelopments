@@ -1,0 +1,243 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone, CheckCircle, Home, Award, Clock, Users, Star, MapPin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import { brand } from "@/config/brand";
+
+const HomeImprovement = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/images/House Work7.jpeg",
+    "/images/House Work2.jpeg",
+    "/images/House Work3.jpeg",
+    "/images/House Work4.jpeg",
+    "/images/House Work5.jpeg",
+    "/images/House Work6.jpeg",
+    "/images/House Work8.jpeg",
+    "/images/House Work9.jpeg",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    {
+      icon: <Home className="h-6 w-6" />,
+      title: "Full Home Renovation",
+      description: "Complete transformation of your entire home",
+    },
+    {
+      icon: <Award className="h-6 w-6" />,
+      title: "Licensed & Insured",
+      description: "Fully licensed and insured professionals",
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "Timely Completion",
+      description: "We respect your time and deliver on schedule",
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Expert Team",
+      description: "Skilled craftsmen with years of experience",
+    },
+  ];
+
+  const services = [
+    "Interior & Exterior Renovation",
+    "Framing & Drywall Installation",
+    "Plumbing & Electrical Work",
+    "Flooring Installation",
+    "Roofing & Siding",
+    "Deck & Patio Construction",
+    "Basement Finishing",
+    "Attic Conversion",
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8] py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white space-y-6">
+              <div className="inline-block">
+                <span className="bg-[#f5d47a] text-[#8ba5c8] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                  Home Improvement Services
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Complete Home Improvement Solutions
+              </h1>
+              <p className="text-xl text-blue-50">
+                Transform your home with our comprehensive renovation and improvement services. From framing to finishing, we handle every aspect of your project.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
+                >
+                  <a href={`tel:${brand.phoneE164}`} className="flex items-center">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call {brand.phoneDisplay}
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold"
+                >
+                  <Link to="/contacto" className="flex items-center">
+                    Request Estimate
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="absolute inset-0">
+                {images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`Home improvement ${index + 1}`}
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#8ba5c8]/60 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8ba5c8] mb-4">
+              Why Choose Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional home improvement services you can trust
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="border-2 border-gray-200 hover:border-[#8ba5c8] transition-all hover:shadow-xl text-center"
+              >
+                <CardContent className="p-6">
+                  <div className="bg-[#f5d47a]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-[#8ba5c8]">{feature.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#8ba5c8] mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services List Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#8ba5c8] mb-6">
+                Our Home Improvement Services
+              </h2>
+              <p className="text-lg text-gray-700 mb-8">
+                We offer a comprehensive range of home improvement services to meet all your renovation needs. Our experienced team handles everything from structural work to finishing touches.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {services.map((service, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-[#f5d47a] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {images.slice(0, 4).map((img, index) => (
+                <div
+                  key={index}
+                  className="relative h-48 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+                >
+                  <img
+                    src={img}
+                    alt={`Home improvement ${index + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Improve Your Home?
+          </h2>
+          <p className="text-xl text-blue-50 mb-8">
+            Contact us today for a free consultation and estimate
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
+            >
+              <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
+                <Phone className="mr-2 h-6 w-6" />
+                Call {brand.phoneDisplay}
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-10 py-6 font-bold"
+            >
+              <Link to="/contacto" className="flex items-center justify-center">
+                Request Estimate
+                <ArrowRight className="ml-2 h-6 w-6" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default HomeImprovement;

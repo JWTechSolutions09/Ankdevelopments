@@ -11,6 +11,12 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import HomeImprovement from "./pages/services/HomeImprovement";
+import KitchenRemodeling from "./pages/services/KitchenRemodeling";
+import BathroomRemodeling from "./pages/services/BathroomRemodeling";
+import WindowReplacement from "./pages/services/WindowReplacement";
+import PaintingServices from "./pages/services/PaintingServices";
+import JunkRemoval from "./pages/services/JunkRemoval";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +34,15 @@ const App = () => (
           <Route path="/servicios" element={<Services />} />
           <Route path="/proyectos" element={<Projects />} />
           <Route path="/contacto" element={<Contact />} />
+          
+          {/* Service Pages */}
+          <Route path="/servicios/home-improvement" element={<HomeImprovement />} />
+          <Route path="/servicios/kitchen-remodeling" element={<KitchenRemodeling />} />
+          <Route path="/servicios/bathroom-remodeling" element={<BathroomRemodeling />} />
+          <Route path="/servicios/window-replacement" element={<WindowReplacement />} />
+          <Route path="/servicios/painting-services" element={<PaintingServices />} />
+          <Route path="/servicios/junk-removal" element={<JunkRemoval />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

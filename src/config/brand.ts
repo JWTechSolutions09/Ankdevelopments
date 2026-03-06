@@ -2,8 +2,8 @@
 export const brand = {
   name: "A&K DEVELOPMENT GROUP HOLDINGS LLC",
   tagline: "Your Home Solution",
-  phoneDisplay: "(407) 655-8012",
-  phoneE164: "+14076558012",
+  phoneDisplay: "(857) 334-1199",
+  phoneE164: "+18573341199",
   website: "www.akdevelopment.com",
   email: "hilson@ankdevelopment.com",
   address: "Serving Boston, MA",
@@ -32,11 +32,13 @@ export const brand = {
 
   theme: {
     bg: "#ffffff",
-    accent: "#1e3a8a", // Dark Blue
-    secondary: "#fbbf24", // Yellow
+    accent: "#8ba5c8", // Pastel Blue (muy suave)
+    secondary: "#f5d47a", // Pastel Gold (muy suave)
+    accentDark: "#7a95b8", // Blue pastel más oscuro
+    secondaryLight: "#fef08a", // Gold muy claro pastel
     text: "#1a1a1a",
     muted: "rgba(0,0,0,.6)",
-    border: "rgba(30,58,138,.2)",
+    border: "rgba(139,165,200,.15)", // Borde más suave
   },
 
   about: {
@@ -51,7 +53,7 @@ export const brand = {
     mission:
       "To deliver exceptional home improvement services that enhance the quality of life for our clients while maintaining the highest standards of craftsmanship, integrity, and customer satisfaction.",
     vision:
-      "To be the premier home improvement company recognized for excellence, innovation, and transforming houses into dream homes across Florida and Massachusetts.",
+      "To be the premier home improvement company recognized for excellence, innovation, and transforming houses into dream homes across Massachusetts.",
     values:
       "Quality craftsmanship, customer satisfaction, integrity, innovation, and building lasting relationships with our clients through exceptional service.",
   },

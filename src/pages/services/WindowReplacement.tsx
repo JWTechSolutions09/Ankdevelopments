@@ -1,0 +1,77 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone, CheckCircle, Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Navbar from "@/components/Navbar";
+import { brand } from "@/config/brand";
+
+const WindowReplacement = () => {
+  const services = [
+    "Energy-Efficient Windows",
+    "Professional Installation",
+    "Warranty Included",
+    "Various Styles & Materials",
+    "Custom Sizing",
+    "Weatherproofing",
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <section className="relative bg-gradient-to-br from-[#9bb5d8] via-[#8a9bc8] to-[#9bb5d8] py-20 lg:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white space-y-6">
+            <div className="inline-block">
+              <span className="bg-[#fde68a] text-[#9bb5d8] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                Window Replacement
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Energy-Efficient Window Replacement
+            </h1>
+            <p className="text-xl text-blue-50 max-w-3xl mx-auto">
+              Improve comfort and reduce utility costs with our professional window replacement services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-[#fde68a] text-[#9bb5d8] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg">
+                <a href={`tel:${brand.phoneE164}`} className="flex items-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call {brand.phoneDisplay}
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold">
+                <Link to="/contacto" className="flex items-center">
+                  Request Estimate
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#9bb5d8] mb-6">Our Window Services</h2>
+              <div className="grid grid-cols-2 gap-4">
+                {services.map((service, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-[#fde68a] mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+              <img src="/images/House Work2.jpeg" alt="Window Replacement" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default WindowReplacement;
