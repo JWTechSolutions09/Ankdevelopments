@@ -73,7 +73,7 @@ const PaintingServices = () => {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-              <img src="/images/Living Room.jpeg" alt="Painting Services" className="w-full h-full object-cover" />
+              <img src="/images/Kitchen Work 2.jpeg" alt="Painting Services" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

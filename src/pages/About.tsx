@@ -144,7 +144,7 @@ const About = () => {
                   animationDuration: `${15 + index * 2}s`
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#fbbf24]/30 hover:border-[#fbbf24] transition-all group cursor-pointer">
+                <div className="bg-[#1e293b]/90 backdrop-blur-md rounded-full p-4 border-2 border-[#fbbf24]/50 hover:border-[#fbbf24] transition-all group cursor-pointer shadow-lg hover:shadow-xl">
                   <Icon className="h-8 w-8 text-white group-hover:text-[#fbbf24] transition-colors" />
                 </div>
               </div>
@@ -308,7 +308,7 @@ const About = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all animate-fade-in-up group relative overflow-hidden"
+                className="text-center bg-[#1e293b]/95 backdrop-blur-md p-8 rounded-2xl hover:bg-[#1e293b] transition-all animate-fade-in-up group relative overflow-hidden border-2 border-[#3b82f6]/40 shadow-lg hover:shadow-xl"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Glow Effect */}
@@ -496,7 +496,7 @@ const About = () => {
             <Button
               asChild
               size="lg"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <Link to="/contacto" className="flex items-center justify-center">
                 Schedule ur visit

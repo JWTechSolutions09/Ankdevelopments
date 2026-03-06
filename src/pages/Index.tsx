@@ -189,7 +189,7 @@ const Index = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold"
+                  className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
                   <Link to="/contacto" className="flex items-center">
                     Request Estimate
@@ -199,13 +199,13 @@ const Index = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <div className="flex items-center gap-2 bg-[#1e293b]/90 backdrop-blur-md border border-[#3b82f6]/40 px-4 py-2 rounded-lg shadow-lg">
                   <MapPin className="h-5 w-5 text-[#fbbf24]" />
-                  <span className="text-white">Boston, MA</span>
+                  <span className="text-white font-semibold">Boston, MA</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
+                <div className="flex items-center gap-2 bg-[#1e293b]/90 backdrop-blur-md border border-[#3b82f6]/40 px-4 py-2 rounded-lg shadow-lg">
                   <Clock className="h-5 w-5 text-[#fbbf24]" />
-                  <span className="text-white">Available 24/7</span>
+                  <span className="text-white font-semibold">Available 24/7</span>
                 </div>
               </div>
             </div>
@@ -307,7 +307,7 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#1e293b]/80 backdrop-blur-sm p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-gray-700/50"
+                className="bg-[#1e293b]/95 backdrop-blur-md p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-[#3b82f6]/40 shadow-lg hover:shadow-xl"
               >
                   <div className="bg-[#fbbf24] w-14 h-14 rounded-xl flex items-center justify-center text-[#0f172a] mb-4">
                   {feature.icon}
@@ -392,11 +392,11 @@ const Index = () => {
           <p className="text-xl text-blue-50 mb-8">
             Contact us today for a free consultation and estimate
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />
@@ -407,7 +407,7 @@ const Index = () => {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-10 py-6 font-bold"
+              className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-10 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <Link to="/contacto" className="flex items-center justify-center">
                 Request Estimate

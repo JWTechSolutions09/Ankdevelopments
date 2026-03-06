@@ -7,12 +7,12 @@ import { brand } from "@/config/brand";
 
 const WindowReplacement = () => {
   const services = [
-    "Energy-Efficient Windows",
     "Professional Installation",
     "Warranty Included",
     "Various Styles & Materials",
     "Custom Sizing",
     "Weatherproofing",
+    "Quality Materials",
   ];
 
   return (
@@ -32,7 +32,7 @@ const WindowReplacement = () => {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Energy-Efficient Window Replacement
+              Professional Window Replacement
             </h1>
             <p className="text-xl text-blue-50 max-w-3xl mx-auto">
               Improve comfort and reduce utility costs with our professional window replacement services.
@@ -73,7 +73,14 @@ const WindowReplacement = () => {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
-              <img src="/images/House Work2.jpeg" alt="Window Replacement" className="w-full h-full object-cover" />
+              <video
+                src="/images/Window Replacement.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

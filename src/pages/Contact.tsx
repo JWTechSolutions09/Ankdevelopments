@@ -235,7 +235,7 @@ const Contact = () => {
                   animationDuration: `${15 + index * 2}s`
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#fbbf24]/30 hover:border-[#fbbf24] transition-all group cursor-pointer">
+                <div className="bg-[#1e293b]/90 backdrop-blur-md rounded-full p-4 border-2 border-[#fbbf24]/50 hover:border-[#fbbf24] transition-all group cursor-pointer shadow-lg hover:shadow-xl">
                   <Icon className="h-8 w-8 text-white group-hover:text-[#fbbf24] transition-colors" />
                 </div>
               </div>
