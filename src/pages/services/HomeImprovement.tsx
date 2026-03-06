@@ -66,7 +66,7 @@ const HomeImprovement = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -75,7 +75,7 @@ const HomeImprovement = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
               <div className="inline-block">
-                <span className="bg-[#fbbf24] text-[#60a5fa] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                <span className="bg-[#fbbf24] text-[#2563eb] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                   Home Improvement Services
                 </span>
               </div>
@@ -89,7 +89,7 @@ const HomeImprovement = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
+                  className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
@@ -122,7 +122,7 @@ const HomeImprovement = () => {
                     }`}
                   />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2563eb]/60 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ const HomeImprovement = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
               Why Choose Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -145,13 +145,13 @@ const HomeImprovement = () => {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#60a5fa] transition-all hover:shadow-xl text-center"
+                className="border-2 border-gray-200 hover:border-[#2563eb] transition-all hover:shadow-xl text-center"
               >
                 <CardContent className="p-6">
                   <div className="bg-[#fbbf24]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-[#60a5fa]">{feature.icon}</div>
+                    <div className="text-[#2563eb]">{feature.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-[#60a5fa] mb-2">
+                  <h3 className="text-xl font-bold text-[#2563eb] mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600">{feature.description}</p>
@@ -167,7 +167,7 @@ const HomeImprovement = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-6">
                 Our Home Improvement Services
               </h2>
               <p className="text-lg text-gray-700 mb-8">
@@ -203,7 +203,7 @@ const HomeImprovement = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#60a5fa]">
+      <section className="py-20 bg-gradient-to-r from-[#2563eb] via-[#1e40af] to-[#2563eb]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Improve Your Home?
@@ -215,7 +215,7 @@ const HomeImprovement = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
+              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />

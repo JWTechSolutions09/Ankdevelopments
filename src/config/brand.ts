@@ -33,9 +33,9 @@ export const brand = {
   theme: {
     bg: "#0f172a", // Dark mode background
     bgSecondary: "#1e293b", // Dark secondary background
-    accent: "#60a5fa", // Bright clear blue
+    accent: "#2563eb", // Darker blue
     secondary: "#fbbf24", // Vibrant gold
-    accentDark: "#3b82f6", // Deeper blue
+    accentDark: "#1e40af", // Deeper darker blue
     secondaryLight: "#fcd34d", // Light gold
     text: "#f1f5f9", // Light text
     muted: "rgba(255,255,255,.7)",

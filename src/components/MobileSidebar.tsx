@@ -42,7 +42,7 @@ const MobileSidebar = () => {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden text-[#60a5fa] hover:bg-[#fbbf24]/20 p-2"
+        className="lg:hidden text-[#2563eb] hover:bg-[#fbbf24]/20 p-2"
         aria-label="Open menu"
       >
         <Menu className="h-6 w-6" />
@@ -58,13 +58,13 @@ const MobileSidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-[#0f172a] border-r border-[#60a5fa]/20 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 left-0 h-full w-80 bg-[#0f172a] border-r border-[#2563eb]/20 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-[#60a5fa]/20 bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
+          <div className="flex items-center justify-between p-6 border-b border-[#2563eb]/20 bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
             <div className="flex items-center space-x-3">
               <img
                 src="/images/Logo.jpg"
@@ -104,8 +104,8 @@ const MobileSidebar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 group ${
                       active
-                        ? "bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] text-white shadow-lg"
-                        : "text-gray-700 hover:bg-[#fbbf24]/10 hover:text-[#60a5fa]"
+                        ? "bg-gradient-to-r from-[#2563eb] to-[#1e40af] text-white shadow-lg"
+                        : "text-gray-700 hover:bg-[#fbbf24]/10 hover:text-[#2563eb]"
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -118,7 +118,7 @@ const MobileSidebar = () => {
                       >
                         <Icon
                           className={`h-5 w-5 ${
-                            active ? "text-white" : "text-[#60a5fa]"
+                            active ? "text-white" : "text-[#2563eb]"
                           }`}
                         />
                       </div>
@@ -142,7 +142,7 @@ const MobileSidebar = () => {
             {/* Quick Contact */}
             <div className="px-4 space-y-3">
               <div className="bg-gradient-to-br from-[#fbbf24]/10 to-[#fde68a]/10 p-4 rounded-xl border border-[#fbbf24]/20">
-                <p className="text-sm font-semibold text-[#60a5fa] mb-2">
+                <p className="text-sm font-semibold text-[#2563eb] mb-2">
                   Need Help?
                 </p>
                 <p className="text-xs text-gray-600 mb-3">
@@ -150,7 +150,7 @@ const MobileSidebar = () => {
                 </p>
                 <Button
                   asChild
-                  className="w-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white font-bold"
+                  className="w-full bg-[#2563eb] hover:bg-[#1e40af] text-white font-bold"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                     <Phone className="mr-2 h-4 w-4" />
@@ -162,7 +162,7 @@ const MobileSidebar = () => {
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-[#60a5fa]/20 bg-[#1e293b]">
+          <div className="p-4 border-t border-[#2563eb]/20 bg-[#1e293b]">
             <p className="text-xs text-center text-gray-400">
               © 2026 A&K Development
             </p>

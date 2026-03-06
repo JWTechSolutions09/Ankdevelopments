@@ -141,7 +141,7 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] border-b border-[#60a5fa]/20">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] border-b border-[#2563eb]/20">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -170,7 +170,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
+                  className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
@@ -228,7 +228,7 @@ const Index = () => {
       <section className="py-20 bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
               Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -241,7 +241,7 @@ const Index = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#60a5fa] transition-all duration-300 hover:shadow-xl bg-white"
+                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#2563eb] transition-all duration-300 hover:shadow-xl bg-white"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -249,13 +249,13 @@ const Index = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/40 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#60a5fa] p-3 rounded-full shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2563eb]/40 to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#2563eb] p-3 rounded-full shadow-lg">
                     {service.icon}
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-[#60a5fa] mb-2">
+                  <h3 className="text-xl font-bold text-[#2563eb] mb-2">
                     {service.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -263,7 +263,7 @@ const Index = () => {
                   </p>
                   <Link
                     to={service.link}
-                    className="text-[#60a5fa] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
+                    className="text-[#2563eb] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -276,7 +276,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-t border-[#60a5fa]/20">
+      <section className="py-20 bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-t border-[#2563eb]/20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -316,7 +316,7 @@ const Index = () => {
       <section className="py-20 bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300">
@@ -328,7 +328,7 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#60a5fa] hover:shadow-xl transition-all bg-white"
+                className="border-2 border-gray-200 hover:border-[#2563eb] hover:shadow-xl transition-all bg-white"
               >
                 <CardContent className="p-8">
                   <div className="flex mb-4">
@@ -350,7 +350,7 @@ const Index = () => {
                     "{testimonial.text}"
                   </p>
                   <div>
-                    <p className="font-bold text-[#60a5fa]">{testimonial.name}</p>
+                    <p className="font-bold text-[#2563eb]">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.location}</p>
                   </div>
                 </CardContent>
@@ -361,7 +361,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#1e293b] border-t border-[#60a5fa]/20">
+      <section className="py-20 bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#1e293b] border-t border-[#2563eb]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Home?

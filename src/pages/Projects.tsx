@@ -136,7 +136,7 @@ const Projects = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#3b82f6] via-[#3b82f6] to-[#3b82f6] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -153,7 +153,7 @@ const Projects = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#3b82f6]/90 via-[#3b82f6]/80 to-[#3b82f6]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/95 via-[#1e293b]/90 to-[#0f172a]/95"></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -213,7 +213,7 @@ const Projects = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#fbbf24] text-[#3b82f6] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+            <span className="bg-[#fbbf24] text-[#0f172a] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
               Our Portfolio
             </span>
           </div>
@@ -267,22 +267,22 @@ const Projects = () => {
                 animationDuration: `${8 + (i % 3) * 1.5}s`
               }}
             >
-              <Filter className="h-4 w-4 text-[#3b82f6]/10 animate-sparkle" style={{ animationDelay: `${i * 0.2}s` }} />
+              <Filter className="h-4 w-4 text-[#1e40af]/10 animate-sparkle" style={{ animationDelay: `${i * 0.2}s` }} />
             </div>
           ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-wrap items-center gap-4 justify-center">
-            <Filter className="h-5 w-5 text-[#3b82f6] animate-tool-rotate" />
+            <Filter className="h-5 w-5 text-[#1e40af] animate-tool-rotate" />
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
                 className={`${selectedCategory === category
-                  ? "bg-[#3b82f6] text-white hover:bg-[#3b82f6] animate-glow-pulse"
-                  : "bg-white text-[#3b82f6] border-[#3b82f6] hover:bg-[#fbbf24] hover:text-[#3b82f6]"
+                  ? "bg-[#2563eb] text-white hover:bg-[#1e40af] animate-glow-pulse"
+                  : "bg-[#1e293b] text-[#2563eb] border-[#2563eb] hover:bg-[#fbbf24] hover:text-[#0f172a]"
                   } font-semibold transition-all hover:scale-110 hover:rotate-1 relative overflow-hidden group/btn`}
               >
                 <span className="relative z-10">{category}</span>
@@ -310,7 +310,7 @@ const Projects = () => {
                 animationDuration: `${7 + (i % 5) * 1.2}s`
               }}
             >
-              <div className="text-[#3b82f6]/8">
+              <div className="text-[#1e40af]/8">
                 {(() => {
                   const IconComponent = [ImageIcon, Video, Filter, CheckCircle, Hammer, Wrench, Settings, Building, HardHat, Award, Star, Sparkles, Play, X, Calendar, Users, ExternalLink, ArrowRight, CheckCircle, ImageIcon][i % 20];
                   return IconComponent ? <IconComponent className={`h-4 w-4 ${i % 4 === 0 ? 'animate-tool-rotate' : i % 4 === 1 ? 'animate-hammer-hit' : i % 4 === 2 ? 'animate-sparkle' : 'animate-particle-float'}`} /> : null;
@@ -325,7 +325,7 @@ const Projects = () => {
             {filteredItems.map((item, index) => (
               <Card
                 key={item.id}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#3b82f6] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white cursor-pointer animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-gray-700 hover:border-[#2563eb] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-[#1e293b] cursor-pointer animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => {
                   if (item.type === "video") {
@@ -344,13 +344,13 @@ const Projects = () => {
 
                 <div className="aspect-square relative overflow-hidden z-10">
                   {item.type === "video" ? (
-                    <div className="relative w-full h-full bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] flex items-center justify-center">
+                    <div className="relative w-full h-full bg-gradient-to-br from-[#1e293b] to-[#0f172a] flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="bg-[#fbbf24] rounded-full p-6 group-hover:scale-110 transition-transform">
-                          <Play className="h-12 w-12 text-[#3b82f6]" fill="currentColor" />
+                          <Play className="h-12 w-12 text-[#2563eb]" fill="currentColor" />
                         </div>
                       </div>
-                      <div className="absolute bottom-2 right-2 bg-[#3b82f6] text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
+                      <div className="absolute bottom-2 right-2 bg-[#2563eb] text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
                         <Video className="h-3 w-3" />
                         Video
                       </div>
@@ -370,7 +370,7 @@ const Projects = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="absolute bottom-4 left-4 right-4 text-white">
                           {item.category && (
-                            <Badge className="bg-[#fbbf24] text-[#3b82f6] group-hover:scale-110 transition-transform duration-300 relative">
+                            <Badge className="bg-[#fbbf24] text-[#0f172a] group-hover:scale-110 transition-transform duration-300 relative">
                               {item.category}
                               {/* Sparkle */}
                               <div className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -395,7 +395,7 @@ const Projects = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#3b82f6] relative overflow-hidden">
+      <section className="py-20 bg-[#0f172a] border-t border-[#2563eb]/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -436,7 +436,7 @@ const Projects = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
               {selectedItem.category && (
-                <Badge className="bg-[#fbbf24] text-[#3b82f6]">{selectedItem.category}</Badge>
+                <Badge className="bg-[#fbbf24] text-[#0f172a]">{selectedItem.category}</Badge>
               )}
             </div>
           </div>

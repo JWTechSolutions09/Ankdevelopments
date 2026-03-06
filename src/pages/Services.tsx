@@ -70,7 +70,7 @@ const Services = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -87,7 +87,7 @@ const Services = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#60a5fa]/90 via-[#60a5fa]/80 to-[#3b82f6]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2563eb]/90 via-[#2563eb]/80 to-[#1e40af]/90"></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -149,7 +149,7 @@ const Services = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#fbbf24] text-[#60a5fa] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
+            <span className="bg-[#fbbf24] text-[#2563eb] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
               Our Services
             </span>
           </div>
@@ -171,7 +171,7 @@ const Services = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -227,7 +227,7 @@ const Services = () => {
                 animationDuration: `${8 + (i % 4) * 1.5}s`
               }}
             >
-              <div className="text-[#60a5fa]/10">
+              <div className="text-[#2563eb]/10">
                 {(() => {
                   const IconComponent = [Hammer, Wrench, Settings, Building, HardHat, Award, Star, CheckCircle, Home, Paintbrush, Sparkles, Phone, Clock, Users, Trash2][i % 15];
                   return IconComponent ? <IconComponent className={`h-5 w-5 ${i % 3 === 0 ? 'animate-tool-rotate' : i % 3 === 1 ? 'animate-hammer-hit' : 'animate-sparkle'}`} /> : null;
@@ -242,7 +242,7 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#60a5fa] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#2563eb] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onMouseEnter={() => setHoveredService(index)}
                 onMouseLeave={() => setHoveredService(null)}
@@ -260,7 +260,7 @@ const Services = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-[#60a5fa]/70 via-[#60a5fa]/65 to-[#3b82f6]/60"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-[#2563eb]/70 via-[#2563eb]/65 to-[#1e40af]/60"></div>
 
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -276,14 +276,14 @@ const Services = () => {
                       <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity" style={{ animationDelay: "0.3s" }}></div>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#60a5fa] px-3 py-1 rounded-full text-xs font-bold group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-20">
+                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#2563eb] px-3 py-1 rounded-full text-xs font-bold group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-20">
                     {service.availability}
                     <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-50 animate-pulse-ring"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#60a5fa] via-[#60a5fa]/80 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#2563eb] via-[#2563eb]/80 to-transparent"></div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <CardTitle className="text-2xl font-bold text-[#60a5fa] mb-3">
+                  <CardTitle className="text-2xl font-bold text-[#2563eb] mb-3">
                     {service.title}
                   </CardTitle>
                   <p className="text-gray-600 mb-4">
@@ -297,13 +297,13 @@ const Services = () => {
                         style={{ animationDelay: `${idx * 0.1}s` }}
                       >
                         <CheckCircle className="h-4 w-4 text-[#fbbf24] flex-shrink-0 group-hover/feature:scale-110 group-hover/feature:rotate-12 transition-all duration-300" />
-                        <span className="text-gray-700 group-hover/feature:text-[#60a5fa] group-hover/feature:font-semibold transition-all">{feature}</span>
+                        <span className="text-gray-700 group-hover/feature:text-[#2563eb] group-hover/feature:font-semibold transition-all">{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Button
                     asChild
-                    className="w-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white font-semibold group/btn relative overflow-hidden"
+                    className="w-full bg-[#2563eb] hover:bg-[#1e40af] text-white font-semibold group/btn relative overflow-hidden"
                   >
                     <Link to={serviceLinks[service.title] || "/contacto"} className="flex items-center justify-center relative z-10">
                       <span className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/20 to-[#fbbf24]/0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000"></span>
@@ -319,7 +319,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#2563eb] to-[#1e40af] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] animate-gradient-shift"></div>
         </div>
@@ -367,7 +367,7 @@ const Services = () => {
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/10 to-[#fbbf24]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
 
-                <div className="absolute -top-4 -left-4 bg-[#fbbf24] text-[#60a5fa] w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative z-10">
+                <div className="absolute -top-4 -left-4 bg-[#fbbf24] text-[#2563eb] w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative z-10">
                   {step.step}
                   {/* Pulse Ring */}
                   <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-50 animate-pulse-ring"></div>
@@ -419,9 +419,9 @@ const Services = () => {
                 </div>
 
                 <div className="bg-[#fbbf24] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
-                  <item.icon className="h-8 w-8 text-[#60a5fa]" />
+                  <item.icon className="h-8 w-8 text-[#2563eb]" />
                   <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#60a5fa] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#2563eb] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#fbbf24] transition-colors relative z-10">{item.title}</h3>
                 <p className="text-blue-50 group-hover:text-white group-hover:font-semibold transition-all relative z-10">{item.desc}</p>
@@ -432,7 +432,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-[#2563eb] via-[#1e40af] to-[#2563eb] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -449,7 +449,7 @@ const Services = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />

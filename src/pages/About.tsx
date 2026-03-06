@@ -39,7 +39,7 @@ const About = () => {
       icon: <Target className="h-8 w-8" />,
       title: "Mission",
       description: brand.about?.mission || "",
-      color: "from-[#60a5fa] to-[#3b82f6]",
+      color: "from-[#2563eb] to-[#1e40af]",
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
@@ -51,7 +51,7 @@ const About = () => {
       icon: <Award className="h-8 w-8" />,
       title: "Values",
       description: brand.about?.values || "",
-      color: "from-[#60a5fa] to-[#3b82f6]",
+      color: "from-[#2563eb] to-[#1e40af]",
     },
   ];
 
@@ -70,7 +70,7 @@ const About = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -87,7 +87,7 @@ const About = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#60a5fa]/90 via-[#60a5fa]/80 to-[#3b82f6]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#2563eb]/90 via-[#2563eb]/80 to-[#1e40af]/90"></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -149,7 +149,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6 animate-fade-in-up">
               <div className="inline-block">
-                <span className="bg-[#fbbf24] text-[#60a5fa] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+                <span className="bg-[#fbbf24] text-[#2563eb] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
                   About Us
                 </span>
               </div>
@@ -176,7 +176,7 @@ const About = () => {
                       }`}
                   />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/80 via-[#60a5fa]/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2563eb]/80 via-[#2563eb]/20 to-transparent"></div>
               </div>
               {/* Image Indicators */}
               <div className="flex justify-center gap-2 mt-4">
@@ -217,7 +217,7 @@ const About = () => {
                 animationDuration: `${9 + (i % 4) * 1.5}s`
               }}
             >
-              <div className="text-[#60a5fa]/10">
+              <div className="text-[#2563eb]/10">
                 {(() => {
                   const IconComponent = [Users, Award, Star, Target, Lightbulb, Heart, Building, HardHat, Hammer, Wrench, Settings, Sparkles][i % 12];
                   return IconComponent ? <IconComponent className={`h-6 w-6 ${i % 3 === 0 ? 'animate-tool-rotate' : i % 3 === 1 ? 'animate-sparkle' : 'animate-particle-float'}`} /> : null;
@@ -231,7 +231,7 @@ const About = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-4">
               <Sparkles className="h-8 w-8 text-[#fbbf24] animate-sparkle" />
-              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa]">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb]">
                 {brand.about?.storyTitle || "Our Story"}
               </h2>
               <Sparkles className="h-8 w-8 text-[#fbbf24] animate-sparkle" style={{ animationDelay: "0.5s" }} />
@@ -268,7 +268,7 @@ const About = () => {
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/60 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2563eb]/60 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
                   {/* Sparkle Effect */}
                   <div className="absolute top-4 right-4 w-3 h-3 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover/image:opacity-100 transition-opacity"></div>
                   {/* Pulse Ring */}
@@ -285,7 +285,7 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#2563eb] to-[#1e40af] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -334,7 +334,7 @@ const About = () => {
                 animationDuration: `${9 + (i % 4) * 1.5}s`
               }}
             >
-              <div className="text-[#60a5fa]/10">
+              <div className="text-[#2563eb]/10">
                 {(() => {
                   const IconComponent = [Target, Lightbulb, Award, Heart, Star, CheckCircle, Users, Building, HardHat, Hammer, Wrench, Sparkles][i % 12];
                   return IconComponent ? <IconComponent className={`h-6 w-6 ${i % 3 === 0 ? 'animate-tool-rotate' : i % 3 === 1 ? 'animate-sparkle' : 'animate-hammer-hit'}`} /> : null;
@@ -348,7 +348,7 @@ const About = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-4">
               <Award className="h-8 w-8 text-[#fbbf24] animate-sparkle" />
-              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa]">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb]">
                 Our Foundation
               </h2>
               <Award className="h-8 w-8 text-[#fbbf24] animate-sparkle" style={{ animationDelay: "0.5s" }} />
@@ -362,7 +362,7 @@ const About = () => {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#60a5fa] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
+                className="border-2 border-gray-200 hover:border-[#2563eb] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
                 onMouseEnter={() => setHoveredValue(index)}
                 onMouseLeave={() => setHoveredValue(null)}
@@ -385,10 +385,10 @@ const About = () => {
                     <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#60a5fa] mb-4 group-hover:text-[#fbbf24] transition-colors">
+                  <h3 className="text-2xl font-bold text-[#2563eb] mb-4 group-hover:text-[#fbbf24] transition-colors">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed group-hover:text-[#60a5fa] group-hover:font-medium transition-all">
+                  <p className="text-gray-600 leading-relaxed group-hover:text-[#2563eb] group-hover:font-medium transition-all">
                     {value.description}
                   </p>
                 </CardContent>
@@ -403,7 +403,7 @@ const About = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
                 Our Team
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -415,7 +415,7 @@ const About = () => {
               {team.map((member, index) => (
                 <Card
                   key={index}
-                  className="border-2 border-gray-200 hover:border-[#60a5fa] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
+                  className="border-2 border-gray-200 hover:border-[#2563eb] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
                   onMouseEnter={() => setHoveredTeam(index)}
                   onMouseLeave={() => setHoveredTeam(null)}
@@ -433,18 +433,18 @@ const About = () => {
                   </div>
 
                   <CardContent className="p-8 text-center relative z-10">
-                    <div className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
+                    <div className="bg-gradient-to-br from-[#2563eb] to-[#1e40af] w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
                       <Users className="h-12 w-12" />
                       <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
                       <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#60a5fa] mb-2 group-hover:text-[#fbbf24] transition-colors">
+                    <h3 className="text-2xl font-bold text-[#2563eb] mb-2 group-hover:text-[#fbbf24] transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-[#fbbf24] font-semibold mb-4 group-hover:text-[#60a5fa] transition-colors">
+                    <p className="text-[#fbbf24] font-semibold mb-4 group-hover:text-[#2563eb] transition-colors">
                       {member.role}
                     </p>
-                    <p className="text-gray-600 leading-relaxed group-hover:text-[#60a5fa] group-hover:font-medium transition-all">
+                    <p className="text-gray-600 leading-relaxed group-hover:text-[#2563eb] group-hover:font-medium transition-all">
                       {member.description}
                     </p>
                   </CardContent>
@@ -456,7 +456,7 @@ const About = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-[#2563eb] via-[#1e40af] to-[#2563eb] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -473,7 +473,7 @@ const About = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />
