@@ -95,8 +95,8 @@ export const brand = {
     },
     {
       title: "Window Replacement",
-      description: "Energy-efficient window replacement to improve comfort and reduce utility costs.",
-      features: ["Energy Efficient", "Professional Installation", "Warranty Included", "Various Styles"],
+      description: "Professional window replacement to enhance your home's comfort and appearance.",
+      features: ["Professional Installation", "Warranty Included", "Various Styles", "Custom Sizing"],
       availability: "Available",
     },
     {

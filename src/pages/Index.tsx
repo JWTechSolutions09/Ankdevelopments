@@ -60,9 +60,9 @@ const Index = () => {
     },
     {
       title: "Window Replacement",
-      description: "Energy-efficient windows that enhance comfort and reduce utility costs.",
+      description: "Professional window replacement services to enhance your home's comfort and appearance.",
       icon: <Home className="h-8 w-8" />,
-      image: "/images/House Work2.jpeg",
+      image: "/images/window2.jpeg",
       link: "/servicios/window-replacement",
     },
     {

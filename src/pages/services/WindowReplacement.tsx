@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, CheckCircle, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +6,21 @@ import Navbar from "@/components/Navbar";
 import { brand } from "@/config/brand";
 
 const WindowReplacement = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const windowImages = [
+    "/images/window.jpeg",
+    "/images/window2.jpeg",
+    "/images/window3.jpeg",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % windowImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   const services = [
     "Professional Installation",
     "Warranty Included",
@@ -35,7 +50,7 @@ const WindowReplacement = () => {
               Professional Window Replacement
             </h1>
             <p className="text-xl text-blue-50 max-w-3xl mx-auto">
-              Improve comfort and reduce utility costs with our professional window replacement services.
+              Enhance your home's comfort and appearance with our professional window replacement services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:scale-105">
@@ -73,24 +88,30 @@ const WindowReplacement = () => {
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl bg-[#0a1628]">
-              <video
-                src="/images/Window Replacement.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover"
-                style={{ 
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block'
-                }}
-              >
-                <source src="/images/Window Replacement.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {windowImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Window Replacement ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                    index === currentImageIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                {windowImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`h-2 rounded-full transition-all ${
+                      index === currentImageIndex
+                        ? "w-8 bg-[#fbbf24]"
+                        : "w-2 bg-white/50 hover:bg-white/75"
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
