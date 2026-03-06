@@ -78,7 +78,7 @@ const KitchenRemodeling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
               <div className="inline-block">
-                <span className="bg-[#fbbf24] text-[#2563eb] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                <span className="bg-[#fbbf24] text-[#0f172a] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                   Kitchen Remodeling
                 </span>
               </div>
@@ -92,7 +92,7 @@ const KitchenRemodeling = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
+                  className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />

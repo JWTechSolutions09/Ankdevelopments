@@ -246,7 +246,7 @@ const Contact = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#fbbf24] text-[#2563eb] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+            <span className="bg-[#fbbf24] text-[#0f172a] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
               Contact Us
             </span>
           </div>
@@ -530,7 +530,7 @@ const Contact = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold"
+                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                   >
                     <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                       <Phone className="mr-2 h-5 w-5" />

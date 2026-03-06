@@ -157,7 +157,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6 animate-fade-in-up">
               <div className="inline-block">
-                <span className="bg-[#fbbf24] text-[#2563eb] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+                <span className="bg-[#fbbf24] text-[#0f172a] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
                   About Us
                 </span>
               </div>
@@ -486,7 +486,7 @@ const About = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />

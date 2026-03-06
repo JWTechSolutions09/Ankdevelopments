@@ -157,7 +157,7 @@ const Services = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#fbbf24] text-[#2563eb] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
+            <span className="bg-[#fbbf24] text-[#0f172a] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg">
               Our Services
             </span>
           </div>
@@ -179,7 +179,7 @@ const Services = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -287,7 +287,7 @@ const Services = () => {
                       <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity" style={{ animationDelay: "0.3s" }}></div>
                     </div>
                   </div>
-                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#2563eb] px-3 py-1 rounded-full text-xs font-bold group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-20">
+                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-20">
                     {service.availability}
                     <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-50 animate-pulse-ring"></div>
                   </div>
@@ -383,7 +383,7 @@ const Services = () => {
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/10 to-[#fbbf24]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
 
-                <div className="absolute -top-4 -left-4 bg-[#fbbf24] text-[#2563eb] w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative z-10">
+                <div className="absolute -top-4 -left-4 bg-[#fbbf24] text-[#0f172a] w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative z-10">
                   {step.step}
                   {/* Pulse Ring */}
                   <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-50 animate-pulse-ring"></div>

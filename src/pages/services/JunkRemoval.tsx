@@ -27,7 +27,7 @@ const JunkRemoval = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white space-y-6">
             <div className="inline-block">
-              <span className="bg-[#fbbf24] text-[#2563eb] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+              <span className="bg-[#fbbf24] text-[#0f172a] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                 Junk Removal
               </span>
             </div>
@@ -38,7 +38,7 @@ const JunkRemoval = () => {
               Clear your space quickly with our professional junk removal services. Same-day service available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg">
+              <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:scale-105">
                 <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call {brand.phoneDisplay}
