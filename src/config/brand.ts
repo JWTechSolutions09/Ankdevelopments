@@ -31,14 +31,15 @@ export const brand = {
   ],
 
   theme: {
-    bg: "#ffffff",
-    accent: "#8ba5c8", // Pastel Blue (muy suave)
-    secondary: "#f5d47a", // Pastel Gold (muy suave)
-    accentDark: "#7a95b8", // Blue pastel más oscuro
-    secondaryLight: "#fef08a", // Gold muy claro pastel
-    text: "#1a1a1a",
-    muted: "rgba(0,0,0,.6)",
-    border: "rgba(139,165,200,.15)", // Borde más suave
+    bg: "#0f172a", // Dark mode background
+    bgSecondary: "#1e293b", // Dark secondary background
+    accent: "#60a5fa", // Bright clear blue
+    secondary: "#fbbf24", // Vibrant gold
+    accentDark: "#3b82f6", // Deeper blue
+    secondaryLight: "#fcd34d", // Light gold
+    text: "#f1f5f9", // Light text
+    muted: "rgba(255,255,255,.7)",
+    border: "rgba(96,165,250,.2)", // Blue border
   },
 
   about: {

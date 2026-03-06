@@ -16,13 +16,13 @@ const WindowReplacement = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
-      <section className="relative bg-gradient-to-br from-[#9bb5d8] via-[#8a9bc8] to-[#9bb5d8] py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] py-20 lg:py-32">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white space-y-6">
             <div className="inline-block">
-              <span className="bg-[#fde68a] text-[#9bb5d8] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+              <span className="bg-[#fbbf24] text-[#60a5fa] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                 Window Replacement
               </span>
             </div>
@@ -33,7 +33,7 @@ const WindowReplacement = () => {
               Improve comfort and reduce utility costs with our professional window replacement services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[#fde68a] text-[#9bb5d8] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg">
+              <Button asChild size="lg" className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg">
                 <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call {brand.phoneDisplay}
@@ -54,11 +54,11 @@ const WindowReplacement = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#9bb5d8] mb-6">Our Window Services</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-6">Our Window Services</h2>
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#fde68a] mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{service}</span>
                   </div>
                 ))}

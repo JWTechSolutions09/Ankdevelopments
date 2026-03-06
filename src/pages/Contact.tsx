@@ -117,14 +117,14 @@ const Contact = () => {
       title: "Phone",
       content: brand.phoneDisplay,
       link: `tel:${brand.phoneE164}`,
-      color: "from-[#a5bdd8] to-[#9ba5c8]",
+      color: "from-[#60a5fa] to-[#3b82f6]",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
       content: brand.email,
       link: `mailto:${brand.email}`,
-      color: "from-[#fef08a] to-[#fbbf24]",
+      color: "from-[#fbbf24] to-[#fbbf24]",
     },
     {
       icon: <WhatsAppIcon className="h-6 w-6" />,
@@ -138,24 +138,24 @@ const Contact = () => {
       title: "Location",
       content: brand.address,
       link: `https://maps.google.com/?q=${encodeURIComponent(brand.mapsQuery)}`,
-      color: "from-[#a5bdd8] to-[#9ba5c8]",
+      color: "from-[#60a5fa] to-[#3b82f6]",
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Hours",
       content: brand.hours?.[0] || "Mon-Fri: 8AM-6PM",
       link: "#",
-      color: "from-[#fef08a] to-[#fbbf24]",
+      color: "from-[#fbbf24] to-[#fbbf24]",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#a5bdd8] via-[#9ba5c8] to-[#a5bdd8] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -172,7 +172,7 @@ const Contact = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#a5bdd8]/90 via-[#a5bdd8]/80 to-[#9ba5c8]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#60a5fa]/90 via-[#60a5fa]/80 to-[#3b82f6]/90"></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -182,7 +182,7 @@ const Contact = () => {
 
         {/* Floating Orbs */}
         <div
-          className="absolute top-20 right-20 w-96 h-96 bg-[#fef08a]/20 rounded-full blur-3xl animate-pulse"
+          className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/20 rounded-full blur-3xl animate-pulse"
           style={{
             transform: `translate(${(mousePosition.x - 500) * 0.05}px, ${(mousePosition.y - 300) * 0.05}px)`,
             transition: "transform 0.3s ease-out"
@@ -196,7 +196,7 @@ const Contact = () => {
           }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#fef08a]/5 rounded-full blur-3xl animate-pulse"
+          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#fbbf24]/5 rounded-full blur-3xl animate-pulse"
           style={{
             transform: `translate(calc(-50% + ${(mousePosition.x - 500) * 0.02}px), calc(-50% + ${(mousePosition.y - 300) * 0.02}px))`,
             transition: "transform 0.3s ease-out"
@@ -227,8 +227,8 @@ const Contact = () => {
                   animationDuration: `${15 + index * 2}s`
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#fef08a]/30 hover:border-[#fef08a] transition-all group cursor-pointer">
-                  <Icon className="h-8 w-8 text-white group-hover:text-[#fef08a] transition-colors" />
+                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#fbbf24]/30 hover:border-[#fbbf24] transition-all group cursor-pointer">
+                  <Icon className="h-8 w-8 text-white group-hover:text-[#fbbf24] transition-colors" />
                 </div>
               </div>
             );
@@ -238,22 +238,22 @@ const Contact = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#fef08a] text-[#a5bdd8] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+            <span className="bg-[#fbbf24] text-[#60a5fa] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
               Contact Us
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Get In Touch
             <br />
-            <span className="text-[#fef08a] relative inline-block">
+            <span className="text-[#fbbf24] relative inline-block">
               With Us
-              <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#fef08a]/30 -z-10 transform rotate-[-2deg]"></div>
+              <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#fbbf24]/30 -z-10 transform rotate-[-2deg]"></div>
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             {brand.contactSubtitle}
           </p>
-          <div className="w-24 h-1 bg-[#fef08a] mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}></div>
+          <div className="w-24 h-1 bg-[#fbbf24] mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}></div>
 
           {/* Image Indicators */}
           <div className="flex justify-center gap-2 mt-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
@@ -261,7 +261,7 @@ const Contact = () => {
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? "w-8 bg-[#fef08a]" : "w-2 bg-white/30 hover:bg-white/50"
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? "w-8 bg-[#fbbf24]" : "w-2 bg-white/30 hover:bg-white/50"
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -292,7 +292,7 @@ const Contact = () => {
                 animationDuration: `${9 + (i % 3) * 1.5}s`
               }}
             >
-              <div className="text-[#a5bdd8]/10">
+              <div className="text-[#60a5fa]/10">
                 {(() => {
                   const IconComponent = [Mail, Phone, MapPin, Clock, MessageSquare, Sparkles, Star, Award][i % 8];
                   return IconComponent ? <IconComponent className={`h-5 w-5 ${i % 3 === 0 ? 'animate-sparkle' : i % 3 === 1 ? 'animate-particle-float' : 'animate-tool-rotate'}`} /> : null;
@@ -307,7 +307,7 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#a5bdd8] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
+                className="border-2 border-gray-200 hover:border-[#60a5fa] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Shimmer Effect */}
@@ -323,10 +323,10 @@ const Contact = () => {
                     {/* Sparkle */}
                     <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
-                  <h3 className="text-lg font-bold text-[#a5bdd8] mb-2 group-hover:text-[#fef08a] transition-colors">{info.title}</h3>
+                  <h3 className="text-lg font-bold text-[#60a5fa] mb-2 group-hover:text-[#fbbf24] transition-colors">{info.title}</h3>
                   <a
                     href={info.link}
-                    className="text-gray-600 hover:text-[#a5bdd8] transition-colors block group-hover:font-semibold text-xs px-2 w-full"
+                    className="text-gray-600 hover:text-[#60a5fa] transition-colors block group-hover:font-semibold text-xs px-2 w-full"
                     style={{ 
                       wordBreak: 'break-word',
                       overflowWrap: 'break-word',
@@ -349,7 +349,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Form */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#a5bdd8] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#60a5fa] mb-6">
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-8">
@@ -358,7 +358,7 @@ const Contact = () => {
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-[#a5bdd8] font-semibold">
+                  <Label htmlFor="name" className="text-[#60a5fa] font-semibold">
                     Name *
                   </Label>
                   <Input
@@ -367,13 +367,13 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#a5bdd8]"
+                    className="mt-2 border-2 border-gray-200 focus:border-[#60a5fa]"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="email" className="text-[#a5bdd8] font-semibold">
+                  <Label htmlFor="email" className="text-[#60a5fa] font-semibold">
                     Email *
                   </Label>
                   <Input
@@ -382,13 +382,13 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#a5bdd8] focus:ring-2 focus:ring-[#fef08a]/50 transition-all hover:border-[#a5bdd8]/50"
+                    className="mt-2 border-2 border-gray-200 focus:border-[#60a5fa] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#60a5fa]/50"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="phone" className="text-[#a5bdd8] font-semibold">
+                  <Label htmlFor="phone" className="text-[#60a5fa] font-semibold">
                     Phone
                   </Label>
                   <Input
@@ -396,13 +396,13 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#a5bdd8] focus:ring-2 focus:ring-[#fef08a]/50 transition-all hover:border-[#a5bdd8]/50"
+                    className="mt-2 border-2 border-gray-200 focus:border-[#60a5fa] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#60a5fa]/50"
                     placeholder="(857) 334-1199"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="service" className="text-[#a5bdd8] font-semibold">
+                  <Label htmlFor="service" className="text-[#60a5fa] font-semibold">
                     Service Interested In
                   </Label>
                   <Input
@@ -410,13 +410,13 @@ const Contact = () => {
                     type="text"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#a5bdd8] focus:ring-2 focus:ring-[#fef08a]/50 transition-all hover:border-[#a5bdd8]/50"
+                    className="mt-2 border-2 border-gray-200 focus:border-[#60a5fa] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#60a5fa]/50"
                     placeholder="Kitchen Remodeling, Bathroom, etc."
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-[#a5bdd8] font-semibold">
+                  <Label htmlFor="message" className="text-[#60a5fa] font-semibold">
                     Message *
                   </Label>
                   <Textarea
@@ -424,7 +424,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#a5bdd8] focus:ring-2 focus:ring-[#fef08a]/50 transition-all hover:border-[#a5bdd8]/50 min-h-[150px]"
+                    className="mt-2 border-2 border-gray-200 focus:border-[#60a5fa] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#60a5fa]/50 min-h-[150px]"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -432,7 +432,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#a5bdd8] hover:bg-[#9ba5c8] text-white font-bold py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 relative overflow-hidden group/btn"
+                  className="w-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white font-bold py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 relative overflow-hidden group/btn"
                 >
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700">
@@ -454,50 +454,50 @@ const Contact = () => {
 
             {/* Right Side - Info */}
             <div className="space-y-8">
-              <Card className="border-2 border-[#fef08a] bg-gradient-to-br from-[#fef08a]/10 to-white group relative overflow-hidden">
+              <Card className="border-2 border-[#fbbf24] bg-gradient-to-br from-[#fbbf24]/10 to-white group relative overflow-hidden">
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#fef08a]/0 via-[#fef08a]/5 to-[#fef08a]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/5 to-[#fbbf24]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="bg-[#a5bdd8] p-3 rounded-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
-                      <MessageSquare className="h-6 w-6 text-[#fef08a]" />
-                      <div className="absolute inset-0 rounded-lg bg-[#fef08a] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
+                    <div className="bg-[#60a5fa] p-3 rounded-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
+                      <MessageSquare className="h-6 w-6 text-[#fbbf24]" />
+                      <div className="absolute inset-0 rounded-lg bg-[#fbbf24] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#a5bdd8] group-hover:text-[#fef08a] transition-colors">
+                    <h3 className="text-2xl font-bold text-[#60a5fa] group-hover:text-[#fbbf24] transition-colors">
                       Why Contact Us?
                     </h3>
                   </div>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3 group/item">
-                      <CheckCircle className="h-5 w-5 text-[#fef08a] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#a5bdd8] group-hover/item:font-semibold transition-all">Schedule ur visit for consultations and estimates</span>
+                      <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
+                      <span className="text-gray-700 group-hover/item:text-[#60a5fa] group-hover/item:font-semibold transition-all">Schedule ur visit for consultations and estimates</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
-                      <CheckCircle className="h-5 w-5 text-[#fef08a] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#a5bdd8] group-hover/item:font-semibold transition-all">Licensed and insured professionals</span>
+                      <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
+                      <span className="text-gray-700 group-hover/item:text-[#60a5fa] group-hover/item:font-semibold transition-all">Licensed and insured professionals</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
-                      <CheckCircle className="h-5 w-5 text-[#fef08a] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#a5bdd8] group-hover/item:font-semibold transition-all">Quality workmanship guaranteed</span>
+                      <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
+                      <span className="text-gray-700 group-hover/item:text-[#60a5fa] group-hover/item:font-semibold transition-all">Quality workmanship guaranteed</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
-                      <CheckCircle className="h-5 w-5 text-[#fef08a] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#a5bdd8] group-hover/item:font-semibold transition-all">Serving Boston, MA</span>
+                      <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
+                      <span className="text-gray-700 group-hover/item:text-[#60a5fa] group-hover/item:font-semibold transition-all">Serving Boston, MA</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#a5bdd8] bg-white">
+              <Card className="border-2 border-[#60a5fa] bg-white">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-[#a5bdd8] mb-4">
+                  <h3 className="text-2xl font-bold text-[#60a5fa] mb-4">
                     Business Hours
                   </h3>
                   <div className="space-y-2">
                     {brand.hours?.map((hour, index) => (
                       <div key={index} className="flex items-center gap-2 text-gray-700">
-                        <Clock className="h-4 w-4 text-[#fef08a]" />
+                        <Clock className="h-4 w-4 text-[#fbbf24]" />
                         <span>{hour}</span>
                       </div>
                     ))}
@@ -505,7 +505,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <div className="bg-gradient-to-br from-[#a5bdd8] to-[#9ba5c8] p-8 rounded-2xl text-white">
+              <div className="bg-gradient-to-br from-[#60a5fa] to-[#3b82f6] p-8 rounded-2xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Need Immediate Help?</h3>
                 <p className="text-blue-100 mb-6">
                   Call us now or message us on WhatsApp for urgent home improvement needs
@@ -514,7 +514,7 @@ const Contact = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full bg-[#fef08a] text-[#a5bdd8] hover:bg-[#fbbf24] font-bold"
+                    className="w-full bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] font-bold"
                   >
                     <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                       <Phone className="mr-2 h-5 w-5" />

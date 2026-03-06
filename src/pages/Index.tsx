@@ -137,11 +137,11 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8]">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] border-b border-[#60a5fa]/20">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -152,14 +152,14 @@ const Index = () => {
             <div className="text-white space-y-8">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="bg-[#f5d47a] text-[#8ba5c8] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                  <span className="bg-[#fbbf24] text-[#0f172a] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                     Serving Boston, MA
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   Transform Your
                   <br />
-                  <span className="text-[#f5d47a]">Home Today</span>
+                  <span className="text-[#fbbf24]">Home Today</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-50 font-light max-w-lg">
                   Professional home improvement services in Boston, MA. Quality craftsmanship you can trust.
@@ -170,7 +170,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fcd47a] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
+                  className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
@@ -192,11 +192,11 @@ const Index = () => {
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <MapPin className="h-5 w-5 text-[#f5d47a]" />
+                  <MapPin className="h-5 w-5 text-[#fbbf24]" />
                   <span className="text-white">Boston, MA</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                  <Clock className="h-5 w-5 text-[#f5d47a]" />
+                  <Clock className="h-5 w-5 text-[#fbbf24]" />
                   <span className="text-white">Available 24/7</span>
                 </div>
               </div>
@@ -216,7 +216,7 @@ const Index = () => {
                       }`}
                     />
                   ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#8ba5c8]/60 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent"></div>
                 </div>
               </div>
             </div>
@@ -225,23 +225,23 @@ const Index = () => {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8ba5c8] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive home improvement solutions tailored to your needs
             </p>
-            <div className="w-24 h-1 bg-[#f5d47a] mx-auto mt-4"></div>
+            <div className="w-24 h-1 bg-[#fbbf24] mx-auto mt-4"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#8ba5c8] transition-all duration-300 hover:shadow-xl bg-white"
+                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#60a5fa] transition-all duration-300 hover:shadow-xl bg-white"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -249,21 +249,21 @@ const Index = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#8ba5c8]/40 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-[#f5d47a] text-[#8ba5c8] p-3 rounded-full shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/40 to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#60a5fa] p-3 rounded-full shadow-lg">
                     {service.icon}
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-[#8ba5c8] mb-2">
+                  <h3 className="text-xl font-bold text-[#60a5fa] mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     {service.description}
                   </p>
                   <Link
                     to={service.link}
-                    className="text-[#8ba5c8] font-semibold hover:text-[#f5d47a] transition-colors flex items-center gap-2"
+                    className="text-[#60a5fa] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -276,7 +276,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-[#8ba5c8] to-[#7a95b8]">
+      <section className="py-20 bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-t border-[#60a5fa]/20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -291,12 +291,12 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all border-l-4 border-[#f5d47a]"
+                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all border-l-4 border-[#fbbf24]"
               >
-                <div className="bg-[#f5d47a] w-14 h-14 rounded-xl flex items-center justify-center text-[#8ba5c8] mb-4">
+                  <div className="bg-[#fbbf24] w-14 h-14 rounded-xl flex items-center justify-center text-[#0f172a] mb-4">
                   {feature.icon}
                 </div>
-                <div className="text-4xl font-bold text-[#f5d47a] mb-2">
+                <div className="text-4xl font-bold text-[#fbbf24] mb-2">
                   {feature.number}
                 </div>
                 <div className="text-white/80 text-sm mb-3">{feature.label}</div>
@@ -313,13 +313,13 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8ba5c8] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-4">
               What Our Customers Say
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-300">
               Trusted by homeowners in Boston, MA
             </p>
           </div>
@@ -328,14 +328,14 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#8ba5c8] hover:shadow-xl transition-all bg-white"
+                className="border-2 border-gray-200 hover:border-[#60a5fa] hover:shadow-xl transition-all bg-white"
               >
                 <CardContent className="p-8">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-5 w-5 fill-[#f5d47a] text-[#f5d47a]"
+                        className="h-5 w-5 fill-[#fbbf24] text-[#fbbf24]"
                       />
                     ))}
                   </div>
@@ -346,12 +346,12 @@ const Index = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-gray-700 mb-6 italic">
+                  <p className="text-gray-300 mb-6 italic">
                     "{testimonial.text}"
                   </p>
                   <div>
-                    <p className="font-bold text-[#8ba5c8]">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                    <p className="font-bold text-[#60a5fa]">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -361,7 +361,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8]">
+      <section className="py-20 bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#1e293b] border-t border-[#60a5fa]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Home?
@@ -373,7 +373,7 @@ const Index = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fcd47a] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />

@@ -131,12 +131,12 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#6d7fa8] via-[#6d7fa8] to-[#6d7fa8] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#3b82f6] via-[#3b82f6] to-[#3b82f6] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -153,7 +153,7 @@ const Projects = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#6d7fa8]/90 via-[#6d7fa8]/80 to-[#6d7fa8]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3b82f6]/90 via-[#3b82f6]/80 to-[#3b82f6]/90"></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -163,7 +163,7 @@ const Projects = () => {
 
         {/* Floating Orbs */}
         <div
-          className="absolute top-20 right-20 w-96 h-96 bg-[#f5d47a]/20 rounded-full blur-3xl animate-pulse"
+          className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/20 rounded-full blur-3xl animate-pulse"
           style={{
             transform: `translate(${(mousePosition.x - 500) * 0.05}px, ${(mousePosition.y - 300) * 0.05}px)`,
             transition: "transform 0.3s ease-out"
@@ -177,7 +177,7 @@ const Projects = () => {
           }}
         ></div>
         <div
-          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#f5d47a]/5 rounded-full blur-3xl animate-pulse"
+          className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#fbbf24]/5 rounded-full blur-3xl animate-pulse"
           style={{
             transform: `translate(calc(-50% + ${(mousePosition.x - 500) * 0.02}px), calc(-50% + ${(mousePosition.y - 300) * 0.02}px))`,
             transition: "transform 0.3s ease-out"
@@ -202,8 +202,8 @@ const Projects = () => {
                   animationDuration: `${15 + index * 2}s`
                 }}
               >
-                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#f5d47a]/30 hover:border-[#f5d47a] transition-all group cursor-pointer">
-                  <Icon className="h-8 w-8 text-white group-hover:text-[#f5d47a] transition-colors" />
+                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4 border-2 border-[#fbbf24]/30 hover:border-[#fbbf24] transition-all group cursor-pointer">
+                  <Icon className="h-8 w-8 text-white group-hover:text-[#fbbf24] transition-colors" />
                 </div>
               </div>
             );
@@ -213,22 +213,22 @@ const Projects = () => {
         {/* Main Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-block mb-6 animate-fade-in-up">
-            <span className="bg-[#f5d47a] text-[#6d7fa8] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
+            <span className="bg-[#fbbf24] text-[#3b82f6] px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse-glow-yellow shadow-lg">
               Our Portfolio
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             Our Projects
             <br />
-            <span className="text-[#f5d47a] relative inline-block">
+            <span className="text-[#fbbf24] relative inline-block">
               Gallery
-              <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#f5d47a]/30 -z-10 transform rotate-[-2deg]"></div>
+              <div className="absolute -bottom-2 left-0 w-full h-3 bg-[#fbbf24]/30 -z-10 transform rotate-[-2deg]"></div>
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Explore our portfolio of completed home improvement projects
           </p>
-          <div className="w-24 h-1 bg-[#f5d47a] mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}></div>
+          <div className="w-24 h-1 bg-[#fbbf24] mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}></div>
 
           {/* Image Indicators */}
           <div className="flex justify-center gap-2 mt-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
@@ -236,7 +236,7 @@ const Projects = () => {
               <button
                 key={index}
                 onClick={() => setCurrentImageIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? "w-8 bg-[#f5d47a]" : "w-2 bg-white/30 hover:bg-white/50"
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? "w-8 bg-[#fbbf24]" : "w-2 bg-white/30 hover:bg-white/50"
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -267,27 +267,27 @@ const Projects = () => {
                 animationDuration: `${8 + (i % 3) * 1.5}s`
               }}
             >
-              <Filter className="h-4 w-4 text-[#6d7fa8]/10 animate-sparkle" style={{ animationDelay: `${i * 0.2}s` }} />
+              <Filter className="h-4 w-4 text-[#3b82f6]/10 animate-sparkle" style={{ animationDelay: `${i * 0.2}s` }} />
             </div>
           ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-wrap items-center gap-4 justify-center">
-            <Filter className="h-5 w-5 text-[#6d7fa8] animate-tool-rotate" />
+            <Filter className="h-5 w-5 text-[#3b82f6] animate-tool-rotate" />
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
                 className={`${selectedCategory === category
-                  ? "bg-[#6d7fa8] text-white hover:bg-[#6d7fa8] animate-glow-pulse"
-                  : "bg-white text-[#6d7fa8] border-[#6d7fa8] hover:bg-[#f5d47a] hover:text-[#6d7fa8]"
+                  ? "bg-[#3b82f6] text-white hover:bg-[#3b82f6] animate-glow-pulse"
+                  : "bg-white text-[#3b82f6] border-[#3b82f6] hover:bg-[#fbbf24] hover:text-[#3b82f6]"
                   } font-semibold transition-all hover:scale-110 hover:rotate-1 relative overflow-hidden group/btn`}
               >
                 <span className="relative z-10">{category}</span>
                 {selectedCategory === category && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#f5d47a]/0 via-[#f5d47a]/20 to-[#f5d47a]/0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/20 to-[#fbbf24]/0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 transform -skew-x-12 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000"></div>
                 )}
               </Button>
             ))}
@@ -310,7 +310,7 @@ const Projects = () => {
                 animationDuration: `${7 + (i % 5) * 1.2}s`
               }}
             >
-              <div className="text-[#6d7fa8]/8">
+              <div className="text-[#3b82f6]/8">
                 {(() => {
                   const IconComponent = [ImageIcon, Video, Filter, CheckCircle, Hammer, Wrench, Settings, Building, HardHat, Award, Star, Sparkles, Play, X, Calendar, Users, ExternalLink, ArrowRight, CheckCircle, ImageIcon][i % 20];
                   return IconComponent ? <IconComponent className={`h-4 w-4 ${i % 4 === 0 ? 'animate-tool-rotate' : i % 4 === 1 ? 'animate-hammer-hit' : i % 4 === 2 ? 'animate-sparkle' : 'animate-particle-float'}`} /> : null;
@@ -325,7 +325,7 @@ const Projects = () => {
             {filteredItems.map((item, index) => (
               <Card
                 key={item.id}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#6d7fa8] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white cursor-pointer animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#3b82f6] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white cursor-pointer animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => {
                   if (item.type === "video") {
@@ -338,19 +338,19 @@ const Projects = () => {
                 {/* Pulse Ring on Hover */}
                 <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0 rounded-full bg-[#f5d47a]/30 animate-pulse-ring"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0 rounded-full bg-[#fbbf24]/30 animate-pulse-ring"></div>
                   </div>
                 </div>
 
                 <div className="aspect-square relative overflow-hidden z-10">
                   {item.type === "video" ? (
-                    <div className="relative w-full h-full bg-gradient-to-br from-[#6d7fa8] to-[#6d7fa8] flex items-center justify-center">
+                    <div className="relative w-full h-full bg-gradient-to-br from-[#3b82f6] to-[#3b82f6] flex items-center justify-center">
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-[#f5d47a] rounded-full p-6 group-hover:scale-110 transition-transform">
-                          <Play className="h-12 w-12 text-[#6d7fa8]" fill="currentColor" />
+                        <div className="bg-[#fbbf24] rounded-full p-6 group-hover:scale-110 transition-transform">
+                          <Play className="h-12 w-12 text-[#3b82f6]" fill="currentColor" />
                         </div>
                       </div>
-                      <div className="absolute bottom-2 right-2 bg-[#6d7fa8] text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
+                      <div className="absolute bottom-2 right-2 bg-[#3b82f6] text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
                         <Video className="h-3 w-3" />
                         Video
                       </div>
@@ -370,7 +370,7 @@ const Projects = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <div className="absolute bottom-4 left-4 right-4 text-white">
                           {item.category && (
-                            <Badge className="bg-[#f5d47a] text-[#6d7fa8] group-hover:scale-110 transition-transform duration-300 relative">
+                            <Badge className="bg-[#fbbf24] text-[#3b82f6] group-hover:scale-110 transition-transform duration-300 relative">
                               {item.category}
                               {/* Sparkle */}
                               <div className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -395,7 +395,7 @@ const Projects = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#6d7fa8] relative overflow-hidden">
+      <section className="py-20 bg-[#3b82f6] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -408,7 +408,7 @@ const Projects = () => {
                 className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-5xl font-bold text-[#f5d47a] mb-2">{stat.number}</div>
+                <div className="text-5xl font-bold text-[#fbbf24] mb-2">{stat.number}</div>
                 <div className="text-white text-lg font-semibold">{stat.label}</div>
               </div>
             ))}
@@ -425,7 +425,7 @@ const Projects = () => {
           <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute -top-12 right-0 text-white text-2xl hover:text-[#f5d47a] transition-colors"
+              className="absolute -top-12 right-0 text-white text-2xl hover:text-[#fbbf24] transition-colors"
             >
               <X className="h-8 w-8" />
             </button>
@@ -436,7 +436,7 @@ const Projects = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
               {selectedItem.category && (
-                <Badge className="bg-[#f5d47a] text-[#6d7fa8]">{selectedItem.category}</Badge>
+                <Badge className="bg-[#fbbf24] text-[#3b82f6]">{selectedItem.category}</Badge>
               )}
             </div>
           </div>
@@ -452,7 +452,7 @@ const Projects = () => {
           <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsVideoModalOpen(false)}
-              className="absolute -top-12 right-0 text-white text-2xl hover:text-[#f5d47a] transition-colors"
+              className="absolute -top-12 right-0 text-white text-2xl hover:text-[#fbbf24] transition-colors"
             >
               <X className="h-8 w-8" />
             </button>

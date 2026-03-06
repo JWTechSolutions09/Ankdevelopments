@@ -42,7 +42,7 @@ const MobileSidebar = () => {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden text-[#8ba5c8] hover:bg-[#f5d47a]/20 p-2"
+        className="lg:hidden text-[#60a5fa] hover:bg-[#fbbf24]/20 p-2"
         aria-label="Open menu"
       >
         <Menu className="h-6 w-6" />
@@ -58,13 +58,13 @@ const MobileSidebar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 left-0 h-full w-80 bg-[#0f172a] border-r border-[#60a5fa]/20 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-gradient-to-r from-[#8ba5c8] to-[#7a95b8]">
+          <div className="flex items-center justify-between p-6 border-b border-[#60a5fa]/20 bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
             <div className="flex items-center space-x-3">
               <img
                 src="/images/Logo.jpg"
@@ -75,7 +75,7 @@ const MobileSidebar = () => {
                 <span className="text-sm font-bold text-white leading-tight">
                   A&K DEVELOPMENT
                 </span>
-                <span className="text-xs text-[#f5d47a] font-semibold">
+                <span className="text-xs text-[#fbbf24] font-semibold">
                   YOUR HOME SOLUTION
                 </span>
               </div>
@@ -104,8 +104,8 @@ const MobileSidebar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 group ${
                       active
-                        ? "bg-gradient-to-r from-[#8ba5c8] to-[#7a95b8] text-white shadow-lg"
-                        : "text-gray-700 hover:bg-[#f5d47a]/10 hover:text-[#8ba5c8]"
+                        ? "bg-gradient-to-r from-[#60a5fa] to-[#3b82f6] text-white shadow-lg"
+                        : "text-gray-700 hover:bg-[#fbbf24]/10 hover:text-[#60a5fa]"
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -113,12 +113,12 @@ const MobileSidebar = () => {
                         className={`p-2 rounded-lg ${
                           active
                             ? "bg-white/20"
-                            : "bg-[#f5d47a]/10 group-hover:bg-[#f5d47a]/20"
+                            : "bg-[#fbbf24]/10 group-hover:bg-[#fbbf24]/20"
                         }`}
                       >
                         <Icon
                           className={`h-5 w-5 ${
-                            active ? "text-white" : "text-[#8ba5c8]"
+                            active ? "text-white" : "text-[#60a5fa]"
                           }`}
                         />
                       </div>
@@ -141,8 +141,8 @@ const MobileSidebar = () => {
 
             {/* Quick Contact */}
             <div className="px-4 space-y-3">
-              <div className="bg-gradient-to-br from-[#f5d47a]/10 to-[#fde68a]/10 p-4 rounded-xl border border-[#f5d47a]/20">
-                <p className="text-sm font-semibold text-[#8ba5c8] mb-2">
+              <div className="bg-gradient-to-br from-[#fbbf24]/10 to-[#fde68a]/10 p-4 rounded-xl border border-[#fbbf24]/20">
+                <p className="text-sm font-semibold text-[#60a5fa] mb-2">
                   Need Help?
                 </p>
                 <p className="text-xs text-gray-600 mb-3">
@@ -150,7 +150,7 @@ const MobileSidebar = () => {
                 </p>
                 <Button
                   asChild
-                  className="w-full bg-[#8ba5c8] hover:bg-[#7a95b8] text-white font-bold"
+                  className="w-full bg-[#60a5fa] hover:bg-[#3b82f6] text-white font-bold"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                     <Phone className="mr-2 h-4 w-4" />
@@ -162,8 +162,8 @@ const MobileSidebar = () => {
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200 bg-gray-50">
-            <p className="text-xs text-center text-gray-500">
+          <div className="p-4 border-t border-[#60a5fa]/20 bg-[#1e293b]">
+            <p className="text-xs text-center text-gray-400">
               © 2026 A&K Development
             </p>
           </div>

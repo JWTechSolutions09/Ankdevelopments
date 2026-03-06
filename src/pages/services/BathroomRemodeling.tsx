@@ -37,14 +37,14 @@ const BathroomRemodeling = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
-      <section className="relative bg-gradient-to-br from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8] py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#60a5fa] via-[#3b82f6] to-[#60a5fa] py-20 lg:py-32 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-6">
               <div className="inline-block">
-                <span className="bg-[#f5d47a] text-[#8ba5c8] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                <span className="bg-[#fbbf24] text-[#60a5fa] px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                   Bathroom Remodeling
                 </span>
               </div>
@@ -55,7 +55,7 @@ const BathroomRemodeling = () => {
                 Transform your bathroom into a luxurious, relaxing space with premium fixtures, elegant finishes, and professional installation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all">
+                <Button asChild size="lg" className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all">
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
                     Call {brand.phoneDisplay}
@@ -74,7 +74,7 @@ const BathroomRemodeling = () => {
                 {images.map((img, index) => (
                   <img key={index} src={img} alt={`Bathroom ${index + 1}`} className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`} />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#8ba5c8]/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#60a5fa]/60 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -85,12 +85,12 @@ const BathroomRemodeling = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#8ba5c8] mb-6">Our Bathroom Services</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#60a5fa] mb-6">Our Bathroom Services</h2>
               <p className="text-lg text-gray-700 mb-8">Complete bathroom renovation services to create your dream space.</p>
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#f5d47a] mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{service}</span>
                   </div>
                 ))}
@@ -107,11 +107,11 @@ const BathroomRemodeling = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#8ba5c8] via-[#7a95b8] to-[#8ba5c8]">
+      <section className="py-20 bg-gradient-to-r from-[#60a5fa] via-[#3b82f6] to-[#60a5fa]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Remodel Your Bathroom?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#f5d47a] text-[#8ba5c8] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl">
+            <Button asChild size="lg" className="bg-[#fbbf24] text-[#60a5fa] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl">
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />
                 Call {brand.phoneDisplay}
