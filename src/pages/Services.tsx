@@ -70,7 +70,7 @@ const Services = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -87,7 +87,16 @@ const Services = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2563eb]/90 via-[#2563eb]/80 to-[#1e40af]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/95 via-[#1e3a5f]/90 to-[#0f1b2e]/95"></div>
+        </div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+        
+        {/* Animated blue orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e40af]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -213,7 +222,10 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         {/* Floating Construction Particles */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(15)].map((_, i) => (
@@ -319,7 +331,12 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-[#2563eb] to-[#1e40af] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift"></div>
+        {/* Blue orbs */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3b82f6]/15 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563eb]/15 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1.5s' }}></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] animate-gradient-shift"></div>
         </div>
@@ -432,7 +449,11 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#2563eb] via-[#1e40af] to-[#2563eb] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift"></div>
+        {/* Blue orbs */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>

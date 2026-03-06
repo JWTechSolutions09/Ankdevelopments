@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Home, Hammer, Image as ImageIcon, Mail } from "lucide-react";
+import { Menu, X, Phone, Home, Hammer, Image as ImageIcon, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { brand } from "@/config/brand";
-import MobileSidebar from "./MobileSidebar";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -87,9 +87,54 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Sidebar */}
-          <MobileSidebar />
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-[#2563eb] hover:bg-[#fbbf24]/20"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t-2 border-[#2563eb]/30 animate-fade-in-up bg-[#0f172a]">
+            <div className="flex flex-col space-y-2">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`px-4 py-3 rounded-lg text-base font-medium transition-colors flex items-center gap-3 ${
+                      isActive(item.path)
+                        ? "bg-gradient-to-r from-[#2563eb] to-[#1e40af] text-white font-semibold"
+                        : "text-gray-300 hover:bg-[#fbbf24]/20 hover:text-[#2563eb]"
+                    }`}
+                  >
+                    <Icon className="h-5 w-5" />
+                    {item.name}
+                  </Link>
+                );
+              })}
+              <Button
+                asChild
+                className="mt-4 bg-[#fbbf24] hover:bg-[#fcd34d] text-[#0f172a] w-full py-3 font-bold shadow-lg"
+                onClick={() => setIsOpen(false)}
+              >
+                <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  {brand.phoneDisplay}
+                </a>
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

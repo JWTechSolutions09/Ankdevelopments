@@ -155,7 +155,7 @@ const Contact = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -172,7 +172,16 @@ const Contact = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2563eb]/90 via-[#2563eb]/80 to-[#1e40af]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/95 via-[#1e3a5f]/90 to-[#0f1b2e]/95"></div>
+        </div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+        
+        {/* Animated blue orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e40af]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
         {/* Animated Grid Pattern */}
@@ -278,7 +287,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-12 bg-gray-50 -mt-10 relative z-10 overflow-hidden">
+      <section className="py-12 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] -mt-10 relative z-10 overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-10 left-10 w-64 h-64 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         {/* Floating Contact Particles */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_, i) => (
@@ -307,7 +319,7 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#2563eb] transition-all hover:-translate-y-2 hover:shadow-xl bg-white group relative overflow-hidden animate-fade-in-up"
+                className="border-2 border-gray-700 hover:border-[#3b82f6] transition-all hover:-translate-y-2 hover:shadow-xl bg-[#1e293b] group relative overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Shimmer Effect */}
@@ -344,7 +356,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Form */}
@@ -367,7 +382,7 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#2563eb]"
+                    className="mt-2 border-2 border-gray-700 bg-[#1e293b] text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/50"
                     placeholder="Your name"
                   />
                 </div>
@@ -382,7 +397,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#2563eb]/50"
+                    className="mt-2 border-2 border-gray-700 bg-[#1e293b] text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/50 transition-all hover:border-[#3b82f6]/50"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -396,7 +411,7 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#2563eb]/50"
+                    className="mt-2 border-2 border-gray-700 bg-[#1e293b] text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/50 transition-all hover:border-[#3b82f6]/50"
                     placeholder="(857) 334-1199"
                   />
                 </div>
@@ -410,7 +425,7 @@ const Contact = () => {
                     type="text"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#2563eb]/50"
+                    className="mt-2 border-2 border-gray-700 bg-[#1e293b] text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/50 transition-all hover:border-[#3b82f6]/50"
                     placeholder="Kitchen Remodeling, Bathroom, etc."
                   />
                 </div>
@@ -424,7 +439,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="mt-2 border-2 border-gray-200 focus:border-[#2563eb] focus:ring-2 focus:ring-[#fbbf24]/50 transition-all hover:border-[#2563eb]/50 min-h-[150px]"
+                    className="mt-2 border-2 border-gray-700 bg-[#1e293b] text-white focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/50 transition-all hover:border-[#3b82f6]/50 min-h-[150px]"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -432,7 +447,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#2563eb] hover:bg-[#1e40af] text-white font-bold py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 relative overflow-hidden group/btn"
+                  className="w-full bg-gradient-to-r from-[#3b82f6] to-[#2563eb] hover:from-[#2563eb] hover:to-[#1e40af] text-white font-bold py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 relative overflow-hidden group/btn"
                 >
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700">
@@ -454,7 +469,7 @@ const Contact = () => {
 
             {/* Right Side - Info */}
             <div className="space-y-8">
-              <Card className="border-2 border-[#fbbf24] bg-gradient-to-br from-[#fbbf24]/10 to-white group relative overflow-hidden">
+              <Card className="border-2 border-[#fbbf24] bg-gradient-to-br from-[#fbbf24]/10 to-[#1e293b] group relative overflow-hidden">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#fbbf24]/0 via-[#fbbf24]/5 to-[#fbbf24]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -489,7 +504,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-[#2563eb] bg-white">
+              <Card className="border-2 border-[#3b82f6] bg-[#1e293b]">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-[#2563eb] mb-4">
                     Business Hours
@@ -505,7 +520,9 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <div className="bg-gradient-to-br from-[#2563eb] to-[#1e40af] p-8 rounded-2xl text-white">
+              <div className="bg-gradient-to-br from-[#0f1b2e] via-[#1a2f4a] to-[#1e3a5f] border border-[#3b82f6]/30 p-8 rounded-2xl text-white relative overflow-hidden">
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift"></div>
                 <h3 className="text-2xl font-bold mb-4">Need Immediate Help?</h3>
                 <p className="text-blue-100 mb-6">
                   Call us now or message us on WhatsApp for urgent home improvement needs

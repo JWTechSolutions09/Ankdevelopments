@@ -141,8 +141,16 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] border-b border-[#2563eb]/20">
-        <div className="absolute inset-0 opacity-5">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] border-b border-[#3b82f6]/30">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+        
+        {/* Animated blue orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e40af]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
 
@@ -225,7 +233,10 @@ const Index = () => {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-20 bg-[#1e293b]">
+      <section className="py-20 bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
@@ -249,13 +260,13 @@ const Index = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2563eb]/40 to-transparent"></div>
-                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#2563eb] p-3 rounded-full shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 to-transparent"></div>
+                  <div className="absolute top-4 right-4 bg-[#fbbf24] text-[#0f172a] p-3 rounded-full shadow-lg">
                     {service.icon}
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-[#2563eb] mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {service.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -263,7 +274,7 @@ const Index = () => {
                   </p>
                   <Link
                     to={service.link}
-                    className="text-[#2563eb] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
+                    className="text-[#3b82f6] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -276,7 +287,12 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-[#1e293b] to-[#0f172a] border-t border-[#2563eb]/20">
+      <section className="py-20 bg-gradient-to-br from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] border-t border-[#3b82f6]/30 relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift"></div>
+        {/* Blue orbs */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3b82f6]/15 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563eb]/15 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1.5s' }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -313,7 +329,10 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-[#1e293b]">
+      <section className="py-20 bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-10 left-10 w-64 h-64 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
@@ -361,7 +380,11 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#1e293b] border-t border-[#2563eb]/20">
+      <section className="py-20 bg-gradient-to-r from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] border-t border-[#3b82f6]/30 relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift"></div>
+        {/* Blue orbs */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Home?

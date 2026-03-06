@@ -136,7 +136,7 @@ const Projects = () => {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden"
+        className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] overflow-hidden"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -153,7 +153,16 @@ const Projects = () => {
                 }`}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/95 via-[#1e293b]/90 to-[#0f172a]/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628]/95 via-[#1e3a5f]/90 to-[#0f1b2e]/95"></div>
+        </div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+        
+        {/* Animated blue orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e40af]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
         {/* Animated Grid Pattern */}

@@ -66,7 +66,12 @@ const HomeImprovement = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#2563eb] via-[#1e40af] to-[#2563eb] py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] py-20 lg:py-32 overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+        {/* Animated blue orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
@@ -130,13 +135,16 @@ const HomeImprovement = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose Us
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional home improvement services you can trust
             </p>
           </div>
@@ -145,16 +153,16 @@ const HomeImprovement = () => {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#2563eb] transition-all hover:shadow-xl text-center"
+                className="border-2 border-gray-700 hover:border-[#3b82f6] transition-all hover:shadow-xl text-center bg-[#1e293b]"
               >
                 <CardContent className="p-6">
                   <div className="bg-[#fbbf24]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-[#2563eb]">{feature.icon}</div>
+                    <div className="text-[#3b82f6]">{feature.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-[#2563eb] mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-300">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -163,21 +171,23 @@ const HomeImprovement = () => {
       </section>
 
       {/* Services List Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-b from-[#0f1b2e] via-[#1a2f4a] to-[#1e3a5f] relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Home Improvement Services
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-300 mb-8">
                 We offer a comprehensive range of home improvement services to meet all your renovation needs. Our experienced team handles everything from structural work to finishing touches.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{service}</span>
+                    <span className="text-gray-300">{service}</span>
                   </div>
                 ))}
               </div>
@@ -203,7 +213,11 @@ const HomeImprovement = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#2563eb] via-[#1e40af] to-[#2563eb]">
+      <section className="py-20 bg-gradient-to-r from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] relative overflow-hidden">
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift"></div>
+        {/* Blue orbs */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Improve Your Home?
@@ -215,7 +229,7 @@ const HomeImprovement = () => {
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />
