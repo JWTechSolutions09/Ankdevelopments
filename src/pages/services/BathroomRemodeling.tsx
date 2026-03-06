@@ -56,7 +56,7 @@ const BathroomRemodeling = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Create Your Spa-Like Bathroom Retreat
               </h1>
-              <p className="text-xl text-blue-50">
+              <p className="text-xl text-white">
                 Transform your bathroom into a luxurious, relaxing space with premium fixtures, elegant finishes, and professional installation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -66,7 +66,7 @@ const BathroomRemodeling = () => {
                     Call {brand.phoneDisplay}
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold">
+                <Button asChild size="lg" variant="outline" className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
                   <Link to="/contacto" className="flex items-center">
                     Request Estimate
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -94,12 +94,12 @@ const BathroomRemodeling = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Bathroom Services</h2>
-              <p className="text-lg text-gray-300 mb-8">Complete bathroom renovation services to create your dream space.</p>
+              <p className="text-lg text-white mb-8">Complete bathroom renovation services to create your dream space.</p>
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{service}</span>
+                    <span className="text-white">{service}</span>
                   </div>
                 ))}
               </div>
@@ -123,13 +123,13 @@ const BathroomRemodeling = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Remodel Your Bathroom?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl">
+            <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]">
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />
                 Call {brand.phoneDisplay}
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-10 py-6 font-bold">
+            <Button asChild size="lg" variant="outline" className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-10 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <Link to="/contacto" className="flex items-center justify-center">
                 Request Estimate
                 <ArrowRight className="ml-2 h-6 w-6" />

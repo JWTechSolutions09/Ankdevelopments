@@ -49,17 +49,17 @@ const WindowReplacement = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Professional Window Replacement
             </h1>
-            <p className="text-xl text-blue-50 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Enhance your home's comfort and appearance with our professional window replacement services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:scale-105">
+              <Button asChild size="lg" className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]">
                 <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                   <Phone className="mr-2 h-5 w-5" />
                   Call {brand.phoneDisplay}
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold">
+              <Button asChild size="lg" variant="outline" className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105">
                 <Link to="/contacto" className="flex items-center">
                   Request Estimate
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -82,7 +82,7 @@ const WindowReplacement = () => {
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{service}</span>
+                    <span className="text-white">{service}</span>
                   </div>
                 ))}
               </div>

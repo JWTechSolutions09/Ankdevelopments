@@ -85,14 +85,14 @@ const KitchenRemodeling = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Transform Your Kitchen Into Your Dream Space
               </h1>
-              <p className="text-xl text-blue-50">
+              <p className="text-xl text-white">
                 Create a modern, functional kitchen with custom designs, quality materials, and expert craftsmanship. From concept to completion, we bring your vision to life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
@@ -142,7 +142,7 @@ const KitchenRemodeling = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose Our Kitchen Remodeling
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Professional kitchen renovation services you can trust
             </p>
           </div>
@@ -160,7 +160,7 @@ const KitchenRemodeling = () => {
                   <h3 className="text-xl font-bold text-white mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-white">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -178,14 +178,14 @@ const KitchenRemodeling = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Kitchen Services
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
+              <p className="text-lg text-white mb-8">
                 We offer comprehensive kitchen remodeling services to transform your space into a modern, functional, and beautiful kitchen you'll love.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-[#fbbf24] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{service}</span>
+                    <span className="text-white">{service}</span>
                   </div>
                 ))}
               </div>
@@ -220,14 +220,14 @@ const KitchenRemodeling = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Remodel Your Kitchen?
           </h2>
-          <p className="text-xl text-blue-50 mb-8">
+          <p className="text-xl text-white mb-8">
             Contact us today for a free consultation and estimate
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-xl hover:shadow-2xl transition-all"
+              className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-10 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
             >
               <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                 <Phone className="mr-2 h-6 w-6" />

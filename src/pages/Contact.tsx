@@ -530,7 +530,7 @@ const Contact = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
                   >
                     <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                       <Phone className="mr-2 h-5 w-5" />

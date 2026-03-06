@@ -178,7 +178,7 @@ const Index = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  className="bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] text-lg px-8 py-6 font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
                 >
                   <a href={`tel:${brand.phoneE164}`} className="flex items-center">
                     <Phone className="mr-2 h-5 w-5" />
