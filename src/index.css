@@ -125,16 +125,16 @@ A&K DEVELOPMENT - Yellow & Dark Blue Theme
   position: sticky;
   top: 0;
   z-index: 50;
-  background: white;
+  background: #0f172a !important;
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(30, 58, 138, 0.1);
-  border-bottom: 3px solid hsl(45 93% 58%);
+  box-shadow: 0 2px 20px rgba(59, 130, 246, 0.2);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.4);
   transition: all 0.3s ease;
 }
 
 .navbar-ak:hover {
-  box-shadow: 0 4px 30px rgba(30, 58, 138, 0.15);
-  border-bottom-color: hsl(45 93% 58%);
+  box-shadow: 0 4px 30px rgba(59, 130, 246, 0.3);
+  border-bottom-color: rgba(59, 130, 246, 0.6);
 }
 
 /* Blue/Yellow theme animations */
