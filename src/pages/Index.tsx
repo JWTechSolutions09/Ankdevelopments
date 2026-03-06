@@ -239,7 +239,7 @@ const Index = () => {
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -252,7 +252,7 @@ const Index = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#2563eb] transition-all duration-300 hover:shadow-xl bg-white"
+                className="group relative overflow-hidden border-2 border-gray-700 hover:border-[#3b82f6] transition-all duration-300 hover:shadow-xl bg-[#1e293b]"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -307,7 +307,7 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all border-l-4 border-[#fbbf24]"
+                className="bg-[#1e293b]/80 backdrop-blur-sm p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-gray-700/50"
               >
                   <div className="bg-[#fbbf24] w-14 h-14 rounded-xl flex items-center justify-center text-[#0f172a] mb-4">
                   {feature.icon}
@@ -315,11 +315,11 @@ const Index = () => {
                 <div className="text-4xl font-bold text-[#fbbf24] mb-2">
                   {feature.number}
                 </div>
-                <div className="text-white/80 text-sm mb-3">{feature.label}</div>
+                <div className="text-white text-sm font-semibold mb-3">{feature.label}</div>
                 <h3 className="text-xl font-bold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-blue-50 text-sm">
+                <p className="text-gray-200 text-sm">
                   {feature.description}
                 </p>
               </div>
@@ -335,7 +335,7 @@ const Index = () => {
         <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300">
@@ -347,7 +347,7 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-200 hover:border-[#2563eb] hover:shadow-xl transition-all bg-white"
+                className="border-2 border-gray-700 hover:border-[#3b82f6] hover:shadow-xl transition-all bg-[#1e293b]"
               >
                 <CardContent className="p-8">
                   <div className="flex mb-4">
@@ -365,12 +365,12 @@ const Index = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-gray-300 mb-6 italic">
+                  <p className="text-gray-200 mb-6 italic text-base">
                     "{testimonial.text}"
                   </p>
                   <div>
-                    <p className="font-bold text-[#2563eb]">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.location}</p>
+                    <p className="font-bold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-300">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>

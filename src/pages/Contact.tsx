@@ -334,10 +334,10 @@ const Contact = () => {
                     {/* Sparkle */}
                     <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
-                  <h3 className="text-lg font-bold text-[#2563eb] mb-2 group-hover:text-[#fbbf24] transition-colors">{info.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#fbbf24] transition-colors">{info.title}</h3>
                   <a
                     href={info.link}
-                    className="text-gray-600 hover:text-[#2563eb] transition-colors block group-hover:font-semibold text-xs px-2 w-full"
+                    className="text-gray-300 hover:text-[#3b82f6] transition-colors block group-hover:font-semibold text-xs px-2 w-full"
                     style={{ 
                       wordBreak: 'break-word',
                       overflowWrap: 'break-word',
@@ -363,16 +363,16 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Side - Form */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#2563eb] mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Send Us a Message
               </h2>
-              <p className="text-gray-600 mb-8">
+              <p className="text-gray-300 mb-8">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
 
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-[#2563eb] font-semibold">
+                  <Label htmlFor="name" className="text-white font-semibold">
                     Name *
                   </Label>
                   <Input
@@ -387,7 +387,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="email" className="text-[#2563eb] font-semibold">
+                  <Label htmlFor="email" className="text-white font-semibold">
                     Email *
                   </Label>
                   <Input
@@ -402,7 +402,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="phone" className="text-[#2563eb] font-semibold">
+                  <Label htmlFor="phone" className="text-white font-semibold">
                     Phone
                   </Label>
                   <Input
@@ -416,7 +416,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="service" className="text-[#2563eb] font-semibold">
+                  <Label htmlFor="service" className="text-white font-semibold">
                     Service Interested In
                   </Label>
                   <Input
@@ -430,7 +430,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-[#2563eb] font-semibold">
+                  <Label htmlFor="message" className="text-white font-semibold">
                     Message *
                   </Label>
                   <Textarea
@@ -478,26 +478,26 @@ const Contact = () => {
                       <MessageSquare className="h-6 w-6 text-[#fbbf24]" />
                       <div className="absolute inset-0 rounded-lg bg-[#fbbf24] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
                     </div>
-                    <h3 className="text-2xl font-bold text-[#2563eb] group-hover:text-[#fbbf24] transition-colors">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-[#fbbf24] transition-colors">
                       Why Contact Us?
                     </h3>
                   </div>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3 group/item">
                       <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#2563eb] group-hover/item:font-semibold transition-all">Schedule ur visit for consultations and estimates</span>
+                      <span className="text-gray-200 group-hover/item:text-[#3b82f6] group-hover/item:font-semibold transition-all">Schedule ur visit for consultations and estimates</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
                       <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#2563eb] group-hover/item:font-semibold transition-all">Licensed and insured professionals</span>
+                      <span className="text-gray-200 group-hover/item:text-[#3b82f6] group-hover/item:font-semibold transition-all">Licensed and insured professionals</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
                       <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#2563eb] group-hover/item:font-semibold transition-all">Quality workmanship guaranteed</span>
+                      <span className="text-gray-200 group-hover/item:text-[#3b82f6] group-hover/item:font-semibold transition-all">Quality workmanship guaranteed</span>
                     </li>
                     <li className="flex items-start gap-3 group/item">
                       <CheckCircle className="h-5 w-5 text-[#fbbf24] flex-shrink-0 mt-0.5 group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300" />
-                      <span className="text-gray-700 group-hover/item:text-[#2563eb] group-hover/item:font-semibold transition-all">Serving Boston, MA</span>
+                      <span className="text-gray-200 group-hover/item:text-[#3b82f6] group-hover/item:font-semibold transition-all">Serving Boston, MA</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -505,12 +505,12 @@ const Contact = () => {
 
               <Card className="border-2 border-[#3b82f6] bg-[#1e293b]">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-[#2563eb] mb-4">
+                  <h3 className="text-2xl font-bold text-white mb-4">
                     Business Hours
                   </h3>
                   <div className="space-y-2">
                     {brand.hours?.map((hour, index) => (
-                      <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <div key={index} className="flex items-center gap-2 text-gray-200">
                         <Clock className="h-4 w-4 text-[#fbbf24]" />
                         <span>{hour}</span>
                       </div>
@@ -530,7 +530,7 @@ const Contact = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full bg-[#fbbf24] text-[#2563eb] hover:bg-[#fbbf24] font-bold"
+                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold"
                   >
                     <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
                       <Phone className="mr-2 h-5 w-5" />
