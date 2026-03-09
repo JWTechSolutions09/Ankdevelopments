@@ -42,6 +42,7 @@ const Services = () => {
     "Painting Services": <Paintbrush className="h-8 w-8" />,
     "Home Improvement": <Home className="h-8 w-8" />,
     "Junk Removal": <Trash2 className="h-8 w-8" />,
+    "Structural & Interior Construction": <Hammer className="h-8 w-8" />,
   };
 
   const serviceImages: Record<string, string> = {
@@ -51,6 +52,7 @@ const Services = () => {
     "Painting Services": "/images/Living Room.jpeg",
     "Home Improvement": "/images/House Work7.jpeg",
     "Junk Removal": "/images/Junk Removal.jpeg",
+    "Structural & Interior Construction": "/images/House Work7.jpeg",
   };
 
   const serviceLinks: Record<string, string> = {
@@ -60,6 +62,7 @@ const Services = () => {
     "Painting Services": "/servicios/painting-services",
     "Home Improvement": "/servicios/home-improvement",
     "Junk Removal": "/servicios/junk-removal",
+    "Structural & Interior Construction": "/servicios/structural-construction",
   };
 
   const processSteps = brand.processSteps || [];
@@ -271,7 +274,6 @@ const Services = () => {
                     alt={service.title}
                     className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-[#2563eb]/70 via-[#2563eb]/65 to-[#1e40af]/60"></div>
 
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -281,7 +283,7 @@ const Services = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className={`transform transition-all duration-500 relative ${hoveredService === index ? 'scale-125 rotate-12' : 'scale-100'
                       }`}>
-                      {serviceIcons[service.title] || <Home className="h-16 w-16 text-white" />}
+                      {serviceIcons[service.title] || <Home className="h-16 w-16 text-white drop-shadow-lg" />}
                       {/* Sparkle around icon */}
                       <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-[#fbbf24] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity" style={{ animationDelay: "0.3s" }}></div>
@@ -291,7 +293,6 @@ const Services = () => {
                     {service.availability}
                     <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-50 animate-pulse-ring"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#2563eb] via-[#2563eb]/80 to-transparent"></div>
                 </CardHeader>
                 <CardContent className="p-6">
                   <CardTitle className="text-2xl font-bold text-[#2563eb] mb-3">
@@ -410,13 +411,16 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose A&K Development
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Excellence in every project, satisfaction in every home
             </p>
           </div>
@@ -428,7 +432,7 @@ const Services = () => {
               { icon: Clock, title: "On Time", desc: "We respect your time and deliver on schedule" },
               { icon: Star, title: "Quality Guaranteed", desc: "Satisfaction guaranteed on all our work" }
             ].map((item, index) => (
-              <div key={index} className="text-center p-6 rounded-xl hover:shadow-xl transition-all group relative overflow-hidden animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-[#1e293b]/95 backdrop-blur-md p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-[#3b82f6]/40 shadow-lg hover:shadow-xl text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Shimmer Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                   <div className="absolute inset-0 animate-shimmer"></div>
@@ -440,7 +444,7 @@ const Services = () => {
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#2563eb] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#fbbf24] transition-colors relative z-10">{item.title}</h3>
-                <p className="text-blue-50 group-hover:text-white group-hover:font-semibold transition-all relative z-10">{item.desc}</p>
+                <p className="text-white text-sm relative z-10">{item.desc}</p>
               </div>
             ))}
           </div>

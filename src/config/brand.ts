@@ -28,6 +28,7 @@ export const brand = {
     "Window Replacement",
     "Painting Services",
     "Junk Removal",
+    "Structural & Interior Construction",
   ],
 
   theme: {
@@ -117,6 +118,12 @@ export const brand = {
       features: ["Same Day Service", "Eco-Friendly Disposal", "All Types Accepted", "Affordable Rates"],
       availability: "Available",
     },
+    {
+      title: "Structural & Interior Construction",
+      description: "Professional structural and interior construction services including framing, insulation, drywall, and electrical/plumbing work.",
+      features: ["Framing", "Insulation", "Drywall", "Electrical and Plumbing"],
+      availability: "Available",
+    },
   ],
 
   serviceCategories: {
@@ -128,6 +135,7 @@ export const brand = {
       "Window Replacement",
       "Painting Services",
       "Home Improvement",
+      "Structural & Interior Construction",
     ],
     removal: [
       "Junk Removal",

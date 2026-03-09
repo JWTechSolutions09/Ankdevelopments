@@ -17,6 +17,7 @@ import BathroomRemodeling from "./pages/services/BathroomRemodeling";
 import WindowReplacement from "./pages/services/WindowReplacement";
 import PaintingServices from "./pages/services/PaintingServices";
 import JunkRemoval from "./pages/services/JunkRemoval";
+import StructuralConstruction from "./pages/services/StructuralConstruction";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/servicios/window-replacement" element={<WindowReplacement />} />
           <Route path="/servicios/painting-services" element={<PaintingServices />} />
           <Route path="/servicios/junk-removal" element={<JunkRemoval />} />
+          <Route path="/servicios/structural-construction" element={<StructuralConstruction />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
