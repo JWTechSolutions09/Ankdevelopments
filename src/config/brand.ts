@@ -5,7 +5,7 @@ export const brand = {
   phoneDisplay: "(857) 334-1199",
   phoneE164: "+18573341199",
   website: "www.akdevelopment.com",
-  email: "hilson@ankdevelopment.com",
+  email: "ankdevelopmentgroup@gmail.com",
   address: "Serving Boston, MA",
   mapsQuery: "Boston, MA",
   contactSubtitle: "Professional Home Improvement Services. Kitchen, Bathroom, Windows, Painting & More.",
