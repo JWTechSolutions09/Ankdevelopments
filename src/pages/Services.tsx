@@ -224,10 +224,10 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
-        {/* Animated blue orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         {/* Floating Construction Particles */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(15)].map((_, i) => (
@@ -256,7 +256,7 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#2563eb] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white animate-fade-in-up"
+                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#fbbf24] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-white animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onMouseEnter={() => setHoveredService(index)}
                 onMouseLeave={() => setHoveredService(null)}
@@ -411,16 +411,16 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
-        {/* Animated blue orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Why Choose A&K Development
             </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Excellence in every project, satisfaction in every home
             </p>
           </div>
@@ -432,7 +432,7 @@ const Services = () => {
               { icon: Clock, title: "On Time", desc: "We respect your time and deliver on schedule" },
               { icon: Star, title: "Quality Guaranteed", desc: "Satisfaction guaranteed on all our work" }
             ].map((item, index) => (
-              <div key={index} className="bg-[#1e293b]/95 backdrop-blur-md p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-[#3b82f6]/40 shadow-lg hover:shadow-xl text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-white backdrop-blur-md p-8 rounded-2xl hover:bg-gray-50 transition-all border-l-4 border-[#fbbf24] border-2 border-gray-200 shadow-lg hover:shadow-xl text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 {/* Shimmer Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                   <div className="absolute inset-0 animate-shimmer"></div>
@@ -443,8 +443,8 @@ const Services = () => {
                   <div className="absolute inset-0 rounded-full bg-[#fbbf24] opacity-0 group-hover:opacity-30 animate-pulse-ring"></div>
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#2563eb] rounded-full animate-sparkle opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#fbbf24] transition-colors relative z-10">{item.title}</h3>
-                <p className="text-white text-sm relative z-10">{item.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#fbbf24] transition-colors relative z-10">{item.title}</h3>
+                <p className="text-gray-600 text-sm relative z-10">{item.desc}</p>
               </div>
             ))}
           </div>
