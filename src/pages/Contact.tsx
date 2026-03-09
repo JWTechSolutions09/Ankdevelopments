@@ -521,37 +521,39 @@ const Contact = () => {
 
               <div className="bg-gradient-to-br from-[#0f1b2e] via-[#1a2f4a] to-[#1e3a5f] border border-[#3b82f6]/30 p-8 rounded-2xl text-white relative overflow-hidden">
                 {/* Animated gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift"></div>
-                <h3 className="text-2xl font-bold mb-4">Need Immediate Help?</h3>
-                <p className="text-blue-100 mb-6">
-                  Call us now or message us on WhatsApp for urgent home improvement needs
-                </p>
-                <div className="space-y-3">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24]"
-                  >
-                    <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
-                      <Phone className="mr-2 h-5 w-5" />
-                      CALL {brand.phoneDisplay}
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold"
-                  >
-                    <a
-                      href={`https://wa.me/${brand.phoneE164.replace(/\+/g, '')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center"
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift pointer-events-none"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4">Need Immediate Help?</h3>
+                  <p className="text-blue-100 mb-6">
+                    Call us now or message us on WhatsApp for urgent home improvement needs
+                  </p>
+                  <div className="space-y-3 relative z-10">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="w-full bg-[#fbbf24] text-[#0f172a] hover:bg-[#fcd34d] font-bold shadow-2xl hover:shadow-[#fbbf24]/50 transition-all hover:scale-105 border-2 border-[#fbbf24] relative z-10"
                     >
-                      <WhatsAppIcon className="mr-2 h-5 w-5" />
-                      WhatsApp Us
-                    </a>
-                  </Button>
+                      <a href={`tel:${brand.phoneE164}`} className="flex items-center justify-center">
+                        <Phone className="mr-2 h-5 w-5" />
+                        CALL {brand.phoneDisplay}
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      size="lg"
+                      className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold relative z-10"
+                    >
+                      <a
+                        href={`https://wa.me/${brand.phoneE164.replace(/\+/g, '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center"
+                      >
+                        <WhatsAppIcon className="mr-2 h-5 w-5" />
+                        WhatsApp Us
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
