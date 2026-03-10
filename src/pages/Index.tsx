@@ -149,29 +149,21 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] via-[#0f1b2e] to-[#1a2f4a] border-b border-[#3b82f6]/30">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/20 via-[#3b82f6]/30 via-[#2563eb]/20 to-[#1e40af]/20 animate-gradient-shift"></div>
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white border-b border-gray-200">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         
-        {/* Animated blue orbs */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#3b82f6]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2563eb]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1e40af]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="text-white space-y-8 pt-8">
+            <div className="text-gray-900 space-y-8 pt-8">
               {/* Logo */}
               <div className="mb-6">
                 <img
-                  src="/images/Logo.jpg"
+                  src="/images/Logo Horizontal.png"
                   alt="A&K Development Logo"
-                  className="h-28 w-28 sm:h-32 sm:w-32 object-contain drop-shadow-lg"
+                  className="h-32 w-auto sm:h-40 sm:w-auto md:h-48 md:w-auto object-contain drop-shadow-lg"
                 />
               </div>
               <div className="space-y-6">
@@ -185,7 +177,7 @@ const Index = () => {
                   <br />
                   <span className="text-[#fbbf24]">Home Today</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-white font-light max-w-lg">
+                <p className="text-xl md:text-2xl text-gray-700 font-light max-w-lg">
                   Professional home improvement services in Boston, MA. Quality craftsmanship you can trust.
                 </p>
               </div>
@@ -205,7 +197,7 @@ const Index = () => {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-md text-white hover:bg-white/20 border-2 border-white text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  className="bg-gray-900 text-white hover:bg-gray-800 border-2 border-gray-900 text-lg px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
                   <Link to="/contacto" className="flex items-center">
                     Request Estimate
@@ -215,20 +207,20 @@ const Index = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg shadow-lg">
+                <div className="flex items-center gap-2 bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg shadow-lg">
                   <MapPin className="h-5 w-5 text-[#fbbf24]" />
-                  <span className="text-white font-semibold">Boston, MA</span>
+                  <span className="text-gray-900 font-semibold">Boston, MA</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-lg shadow-lg">
+                <div className="flex items-center gap-2 bg-gray-100 border border-gray-200 px-4 py-2 rounded-lg shadow-lg">
                   <Clock className="h-5 w-5 text-[#fbbf24]" />
-                  <span className="text-white font-semibold">Available 24/7</span>
+                  <span className="text-gray-900 font-semibold">Available 24/7</span>
                 </div>
               </div>
             </div>
 
             {/* Right Content - Image Carousel */}
             <div className="hidden lg:block relative">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-200">
                 <div className="absolute inset-0">
                   {heroImages.map((img, index) => (
                     <img
@@ -240,7 +232,6 @@ const Index = () => {
                       }`}
                     />
                   ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 to-transparent"></div>
                 </div>
               </div>
             </div>
@@ -249,16 +240,16 @@ const Index = () => {
       </section>
 
       {/* Services Grid Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Animated yellow orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="py-20 bg-gradient-to-br from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
+        {/* Animated blue orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Comprehensive home improvement solutions tailored to your needs
             </p>
             <div className="w-24 h-1 bg-[#fbbf24] mx-auto mt-4"></div>
@@ -268,7 +259,7 @@ const Index = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group relative overflow-hidden border-2 border-gray-200 hover:border-[#fbbf24] transition-all duration-300 hover:shadow-xl bg-white"
+                className="group relative overflow-hidden border-2 border-gray-700 hover:border-[#fbbf24] transition-all duration-300 hover:shadow-xl bg-[#1e293b]"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -281,15 +272,15 @@ const Index = () => {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-300 mb-4">
                     {service.description}
                   </p>
                   <Link
                     to={service.link}
-                    className="text-[#2563eb] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
+                    className="text-[#3b82f6] font-semibold hover:text-[#fbbf24] transition-colors flex items-center gap-2"
                   >
                     Learn More
                     <ArrowRight className="h-4 w-4" />
@@ -302,18 +293,16 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] border-t border-[#3b82f6]/30 relative overflow-hidden">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/10 via-[#3b82f6]/20 via-[#2563eb]/10 to-[#1e40af]/10 animate-gradient-shift"></div>
-        {/* Blue orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3b82f6]/15 rounded-full blur-3xl animate-blue-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2563eb]/15 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Why Choose A&K Development
             </h2>
-            <p className="text-xl text-blue-50 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Excellence in every project, satisfaction in every home
             </p>
           </div>
@@ -322,7 +311,7 @@ const Index = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#1e293b]/95 backdrop-blur-md p-8 rounded-2xl hover:bg-[#1e293b] transition-all border-l-4 border-[#fbbf24] border-2 border-[#3b82f6]/40 shadow-lg hover:shadow-xl"
+                className="bg-white backdrop-blur-md p-8 rounded-2xl hover:bg-gray-50 transition-all border-l-4 border-[#fbbf24] border-2 border-gray-200 shadow-lg hover:shadow-xl"
               >
                   <div className="bg-[#fbbf24] w-14 h-14 rounded-xl flex items-center justify-center text-[#0f172a] mb-4">
                   {feature.icon}
@@ -330,11 +319,11 @@ const Index = () => {
                 <div className="text-4xl font-bold text-[#fbbf24] mb-2">
                   {feature.number}
                 </div>
-                <div className="text-white text-sm font-semibold mb-3">{feature.label}</div>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <div className="text-gray-600 text-sm font-semibold mb-3">{feature.label}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-white text-sm">
+                <p className="text-gray-600 text-sm">
                   {feature.description}
                 </p>
               </div>
@@ -395,16 +384,14 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] border-t border-[#3b82f6]/30 relative overflow-hidden">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift"></div>
-        {/* Blue orbs */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Transform Your Home?
           </h2>
-          <p className="text-xl text-blue-50 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Contact us today for a free consultation and estimate
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
@@ -422,7 +409,7 @@ const Index = () => {
               asChild
               size="lg"
               variant="outline"
-              className="bg-[#1e293b]/90 backdrop-blur-md text-white hover:bg-[#3b82f6]/30 border-2 border-[#3b82f6] text-lg px-10 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="bg-gray-900 text-white hover:bg-gray-800 border-2 border-gray-900 text-lg px-10 py-6 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <Link to="/contacto" className="flex items-center justify-center">
                 Request Estimate
