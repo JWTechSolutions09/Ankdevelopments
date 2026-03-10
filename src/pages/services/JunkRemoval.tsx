@@ -126,16 +126,16 @@ const JunkRemoval = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-[#0a1628] via-[#1e3a5f] to-[#0f1b2e] relative overflow-hidden">
-        {/* Animated blue orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#2563eb]/10 rounded-full blur-3xl animate-blue-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Why Choose Our Junk Removal
             </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Professional junk removal services you can trust
             </p>
           </div>
@@ -144,16 +144,16 @@ const JunkRemoval = () => {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="border-2 border-gray-700 hover:border-[#3b82f6] transition-all hover:shadow-xl text-center bg-[#1e293b]"
+                className="border-2 border-gray-200 hover:border-[#fbbf24] transition-all hover:shadow-xl text-center bg-white"
               >
                 <CardContent className="p-6">
                   <div className="bg-[#fbbf24]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-[#3b82f6]">{feature.icon}</div>
+                    <div className="text-[#2563eb]">{feature.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-white">{feature.description}</p>
+                  <p className="text-gray-600">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -201,16 +201,14 @@ const JunkRemoval = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0f1b2e] via-[#1a2f4a] via-[#1e3a5f] to-[#0a1628] relative overflow-hidden">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af]/15 via-[#3b82f6]/25 via-[#2563eb]/15 to-[#1e40af]/15 animate-gradient-shift pointer-events-none"></div>
-        {/* Blue orbs */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3b82f6]/10 rounded-full blur-3xl animate-blue-pulse pointer-events-none"></div>
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Animated yellow orbs */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to Clear Your Space?
           </h2>
-          <p className="text-xl text-white mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Contact us today for a free consultation and estimate
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
@@ -228,7 +226,7 @@ const JunkRemoval = () => {
               asChild
               size="lg"
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-2 border-white text-lg px-10 py-6 font-bold"
+              className="bg-gray-900 text-white hover:bg-gray-800 border-2 border-gray-900 text-lg px-10 py-6 font-bold"
             >
               <Link to="/contacto" className="flex items-center justify-center">
                 Request Estimate
