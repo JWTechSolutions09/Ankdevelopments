@@ -161,7 +161,7 @@ const Index = () => {
               {/* Logo */}
               <div className="mb-6">
                 <img
-                  src="/images/Logo Horizontal.png"
+                  src="/images/Logo Horizontal2.png"
                   alt="A&K Development Logo"
                   className="h-32 w-auto sm:h-40 sm:w-auto md:h-48 md:w-auto object-contain drop-shadow-lg"
                 />
