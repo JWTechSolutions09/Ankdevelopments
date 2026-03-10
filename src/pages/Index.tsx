@@ -149,15 +149,15 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white border-b border-gray-200">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white border-b border-gray-200">
         {/* Animated yellow orbs */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#fcd34d]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="text-gray-900 space-y-8 pt-8">
+            <div className="text-gray-900 space-y-8">
               {/* Logo */}
               <div className="mb-6">
                 <img
