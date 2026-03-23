@@ -10,9 +10,8 @@ const WindowReplacement = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const windowImages = [
-    "/images/window.jpeg",
-    "/images/window2.jpeg",
-    "/images/window3.jpeg",
+    "/images/WindowReplacement.jpeg",
+    "/images/WindowReplacement2.jpeg",
   ];
 
   useEffect(() => {

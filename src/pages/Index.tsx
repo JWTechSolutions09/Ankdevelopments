@@ -63,7 +63,7 @@ const Index = () => {
       title: "Window Replacement",
       description: "Professional window replacement services to enhance your home's comfort and appearance.",
       icon: <Home className="h-8 w-8" />,
-      image: "/images/window2.jpeg",
+      image: "/images/WindowReplacement.jpeg",
       link: "/servicios/window-replacement",
     },
     {

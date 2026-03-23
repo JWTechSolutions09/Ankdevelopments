@@ -48,7 +48,7 @@ const Services = () => {
   const serviceImages: Record<string, string> = {
     "Kitchen Remodeling": "/images/Kitchen Work 2.jpeg",
     "Bathroom Remodeling": "/images/Bathroom Work2.jpeg",
-    "Window Replacement": "/images/House Work2.jpeg",
+    "Window Replacement": "/images/WindowReplacement.jpeg",
     "Painting Services": "/images/Living Room.jpeg",
     "Home Improvement": "/images/House Work7.jpeg",
     "Junk Removal": "/images/Junk Removal.jpeg",
